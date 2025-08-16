@@ -1,67 +1,157 @@
 import { Button } from "@/components/ui/button";
-import { Download, Play } from "lucide-react";
+import { Download, Play, QrCode, Star } from "lucide-react";
 import appMockup from "@/assets/app-mockup.png";
+import aiPlantIcon from "@/assets/ai-plant-icon.png";
 
 const Hero = () => {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-background via-nature-mint/10 to-success/5">
-      <div className="container-width section-padding">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Text Content */}
-          <div className="text-center lg:text-left space-y-8">
-            <div className="space-y-4">
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight">
-                <span className="text-gradient">UseVerdant</span>
+    <section className="relative overflow-hidden bg-gradient-to-br from-nature-mint/20 via-background to-success/10 min-h-[90vh]">
+      {/* Decorative Background Elements */}
+      <div className="absolute top-20 left-10 w-4 h-4 grid grid-cols-4 gap-1">
+        {Array.from({ length: 16 }).map((_, i) => (
+          <div key={i} className="w-1 h-1 bg-primary/30 rounded-full"></div>
+        ))}
+      </div>
+      
+      {/* Floating Plant Elements */}
+      <div className="absolute top-32 right-20 w-16 h-16 bg-gradient-to-br from-success/20 to-primary/20 rounded-full flex items-center justify-center">
+        <div className="w-8 h-8 bg-success/40 rounded-full"></div>
+      </div>
+      <div className="absolute bottom-40 left-20 w-12 h-12 bg-gradient-to-br from-nature-emerald/20 to-success/20 rounded-full"></div>
+      <div className="absolute top-1/2 right-10 w-20 h-20 bg-gradient-to-br from-primary/15 to-nature-mint/25 rounded-full"></div>
+
+      <div className="container-width py-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          {/* Left Content */}
+          <div className="space-y-8">
+            {/* Main Heading */}
+            <div className="space-y-6">
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight">
+                <span className="text-primary">UseVerdant</span>
               </h1>
-              <p className="text-xl sm:text-2xl text-muted-foreground max-w-2xl">
-                Identify any plant instantly with AI-powered scanning
-              </p>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground/90">
+                AI Botanist In<br />Your Pocket
+              </h2>
             </div>
 
-            <p className="text-lg text-foreground/80 max-w-xl">
-              Point your camera at any plant and discover its name, care tips, and growing advice in seconds. Perfect for nature lovers, gardeners, and students.
-            </p>
-
-            {/* Download Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button size="lg" className="hero-button group">
-                <Download className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
-                App Store
-              </Button>
-              <Button size="lg" className="hero-button group">
-                <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
-                Google Play
-              </Button>
-            </div>
-
-            {/* Trust Indicators */}
-            <div className="flex flex-col sm:flex-row items-center gap-6 text-sm text-muted-foreground justify-center lg:justify-start">
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-success rounded-full"></div>
-                <span>Free to download</span>
+            {/* Download Section */}
+            <div className="space-y-6">
+              {/* QR Code and Store Buttons */}
+              <div className="flex items-start gap-6">
+                <div className="bg-white/80 p-4 rounded-2xl shadow-soft">
+                  <QrCode className="w-20 h-20 text-foreground/80" />
+                </div>
+                <div className="space-y-3">
+                  <Button size="lg" className="bg-black text-white hover:bg-black/90 flex items-center gap-3 px-6 rounded-xl">
+                    <div className="w-6 h-6 bg-white rounded-sm flex items-center justify-center">
+                      <span className="text-black text-xs font-bold">⌘</span>
+                    </div>
+                    <div className="text-left">
+                      <div className="text-xs opacity-80">Download on the</div>
+                      <div className="font-semibold">App Store</div>
+                    </div>
+                  </Button>
+                  <Button size="lg" className="bg-black text-white hover:bg-black/90 flex items-center gap-3 px-6 rounded-xl">
+                    <Play className="w-6 h-6 fill-current" />
+                    <div className="text-left">
+                      <div className="text-xs opacity-80">GET IT ON</div>
+                      <div className="font-semibold">Google Play</div>
+                    </div>
+                  </Button>
+                </div>
               </div>
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-success rounded-full"></div>
-                <span>No ads or subscriptions</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-success rounded-full"></div>
-                <span>Works offline</span>
+
+              {/* Stats */}
+              <div className="flex items-center gap-8">
+                <div className="flex items-center gap-2">
+                  <div className="flex">
+                    {Array.from({ length: 5 }).map((_, i) => (
+                      <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                    ))}
+                  </div>
+                  <div className="text-center">
+                    <div className="text-lg font-bold text-primary">150000+</div>
+                    <div className="text-sm text-muted-foreground">5-Star Reviews</div>
+                  </div>
+                </div>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-primary">25M+</div>
+                  <div className="text-sm text-muted-foreground">Downloads</div>
+                </div>
               </div>
             </div>
           </div>
 
-          {/* App Mockup */}
-          <div className="relative flex justify-center lg:justify-end">
-            <div className="relative">
-              <img
-                src={appMockup}
-                alt="UseVerdant app mockup showing plant identification interface"
-                className="app-mockup w-80 sm:w-96 h-auto floating-animation"
-              />
-              {/* Floating elements */}
-              <div className="absolute -top-4 -left-4 w-16 h-16 bg-gradient-to-br from-success/20 to-primary/20 rounded-full blur-xl animate-pulse"></div>
-              <div className="absolute -bottom-8 -right-8 w-24 h-24 bg-gradient-to-br from-primary/20 to-nature-emerald/20 rounded-full blur-xl animate-pulse delay-1000"></div>
+          {/* Right Content - Phone Mockups */}
+          <div className="relative flex justify-center items-center">
+            {/* Main Phone */}
+            <div className="relative z-10">
+              <div className="w-80 h-[600px] bg-gradient-to-b from-sky-200 to-sky-100 rounded-[3rem] p-2 shadow-2xl">
+                <div className="w-full h-full bg-white rounded-[2.5rem] overflow-hidden relative">
+                  {/* Phone Content - Plant Identification */}
+                  <div className="p-6 space-y-4">
+                    <div className="flex items-center justify-between">
+                      <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+                      <div className="text-sm font-medium">Unlimited IDs</div>
+                      <div className="w-6 h-6"></div>
+                    </div>
+                    
+                    <div className="relative">
+                      <img src={appMockup} alt="Plant identification" className="w-full h-48 object-cover rounded-2xl" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
+                    </div>
+
+                    <div className="bg-sky-50 rounded-2xl p-4">
+                      <div className="text-lg font-semibold text-primary mb-2">Monstera Deliciosa</div>
+                      <div className="text-sm text-muted-foreground italic mb-3">Monstera deliciosa</div>
+                      
+                      <div className="grid grid-cols-2 gap-3">
+                        <div className="flex items-center gap-2 text-xs">
+                          <div className="w-2 h-2 bg-red-400 rounded-full"></div>
+                          <span>Non-toxic to humans</span>
+                        </div>
+                        <div className="flex items-center gap-2 text-xs">
+                          <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+                          <span>Beneficial to plants</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="flex justify-between text-xs text-muted-foreground">
+                      <div className="text-center">
+                        <div className="w-8 h-8 bg-sky-100 rounded-full mb-1"></div>
+                        <span>Photos</span>
+                      </div>
+                      <div className="text-center">
+                        <div className="w-8 h-8 bg-blue-100 rounded-full mb-1"></div>
+                        <span>Instruction</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Secondary Phone */}
+            <div className="absolute -right-8 top-12 z-0 transform rotate-12">
+              <div className="w-64 h-[500px] bg-gradient-to-b from-emerald-200 to-emerald-100 rounded-[2.5rem] p-2 shadow-xl">
+                <div className="w-full h-full bg-white rounded-[2rem] overflow-hidden">
+                  <div className="p-4 space-y-3">
+                    <div className="bg-emerald-50 rounded-xl p-3">
+                      <div className="text-base font-semibold text-primary">Swiss Cheese Plant</div>
+                      <div className="text-xs text-muted-foreground italic">Monstera deliciosa</div>
+                    </div>
+                    <div className="space-y-2 text-xs">
+                      <div>• More examples of Monstera butterfly</div>
+                      <div className="flex justify-end">
+                        <Button size="sm" className="bg-primary text-white text-xs px-4 py-1 rounded-full">
+                          + Add to My Collection
+                        </Button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

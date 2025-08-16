@@ -160,9 +160,21 @@ All colors MUST be HSL.
 
   .nature-card {
     @apply bg-gradient-to-br from-card to-nature-mint/20 
-           border-nature-sage/20 shadow-soft 
-           hover:shadow-nature transition-all duration-300 
+           border-nature-sage/20 shadow-lg 
+           hover:shadow-xl transition-all duration-300 
            hover:-translate-y-1;
+  }
+
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .shadow-nature {
+    box-shadow: var(--shadow-nature);
+  }
+
+  .shadow-hero {
+    box-shadow: var(--shadow-hero);
   }
 
   .feature-icon {

@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Search, Globe } from "lucide-react";
-import aiPlantIcon from "@/assets/ai-plant-icon.png";
+// Import the user's logo image from the upload
 
 const Navigation = () => {
   return (
@@ -9,7 +9,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center gap-3">
-            <img src={aiPlantIcon} alt="UseVerdant AI Plant Icon" className="w-8 h-8" />
+            <img src="/lovable-uploads/479e70a8-1ab2-401a-8ac3-e8bbaa9bf470.png" alt="UseVerdant Plant Logo" className="w-8 h-8" />
             <span className="text-xl font-bold text-primary">UseVerdant</span>
           </div>
 

@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { Download, Play, QrCode, Star } from "lucide-react";
-import appMockup from "@/assets/app-mockup.png";
-import aiPlantIcon from "@/assets/ai-plant-icon.png";
+import { Download, Play, Star } from "lucide-react";
+import qrCode from "@/assets/qr-code.png";
+import rosesDetailed from "@/assets/roses-detailed.jpg";
 
 const Hero = () => {
   return (
@@ -39,7 +39,7 @@ const Hero = () => {
               {/* QR Code and Store Buttons */}
               <div className="flex items-start gap-6">
                 <div className="bg-white/80 p-4 rounded-2xl shadow-soft">
-                  <QrCode className="w-20 h-20 text-foreground/80" />
+                  <img src={qrCode} alt="Download QR Code" className="w-20 h-20" />
                 </div>
                 <div className="space-y-3">
                   <Button size="lg" className="bg-black text-white hover:bg-black/90 flex items-center gap-3 px-6 rounded-xl">
@@ -97,22 +97,22 @@ const Hero = () => {
                     </div>
                     
                     <div className="relative">
-                      <img src={appMockup} alt="Plant identification" className="w-full h-48 object-cover rounded-2xl" />
+                      <img src={rosesDetailed} alt="Beautiful red roses" className="w-full h-48 object-cover rounded-2xl" />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
                     </div>
 
-                    <div className="bg-sky-50 rounded-2xl p-4">
-                      <div className="text-lg font-semibold text-primary mb-2">Monstera Deliciosa</div>
-                      <div className="text-sm text-muted-foreground italic mb-3">Monstera deliciosa</div>
+                    <div className="bg-emerald-50 rounded-2xl p-4">
+                      <div className="text-lg font-semibold text-primary mb-2">Garden Rose</div>
+                      <div className="text-sm text-muted-foreground italic mb-3">Rosa × damascena</div>
                       
                       <div className="grid grid-cols-2 gap-3">
                         <div className="flex items-center gap-2 text-xs">
-                          <div className="w-2 h-2 bg-red-400 rounded-full"></div>
-                          <span>Non-toxic to humans</span>
+                          <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+                          <span>Safe for gardens</span>
                         </div>
                         <div className="flex items-center gap-2 text-xs">
-                          <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                          <span>Beneficial to plants</span>
+                          <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+                          <span>Attracts pollinators</span>
                         </div>
                       </div>
                     </div>
@@ -137,15 +137,18 @@ const Hero = () => {
               <div className="w-64 h-[500px] bg-gradient-to-b from-emerald-200 to-emerald-100 rounded-[2.5rem] p-2 shadow-xl">
                 <div className="w-full h-full bg-white rounded-[2rem] overflow-hidden">
                   <div className="p-4 space-y-3">
-                    <div className="bg-emerald-50 rounded-xl p-3">
-                      <div className="text-base font-semibold text-primary">Swiss Cheese Plant</div>
-                      <div className="text-xs text-muted-foreground italic">Monstera deliciosa</div>
+                    <div className="bg-rose-50 rounded-xl p-3">
+                      <div className="text-base font-semibold text-primary">Garden Rose Details</div>
+                      <div className="text-xs text-muted-foreground italic">Rosa × damascena</div>
                     </div>
                     <div className="space-y-2 text-xs">
-                      <div>• More examples of Monstera butterfly</div>
+                      <div><strong>Safety:</strong> Safe for humans and pets</div>
+                      <div><strong>Care:</strong> Full sun, well-drained soil</div>
+                      <div><strong>Ecology:</strong> Attracts bees, butterflies</div>
+                      <div><strong>Similar:</strong> Hybrid tea roses</div>
                       <div className="flex justify-end">
                         <Button size="sm" className="bg-primary text-white text-xs px-4 py-1 rounded-full">
-                          + Add to My Collection
+                          + Add to My Garden
                         </Button>
                       </div>
                     </div>

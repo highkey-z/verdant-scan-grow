@@ -58,37 +58,6 @@ const Features = () => {
           ))}
         </div>
 
-        {/* Feature Highlight */}
-        <div className="mt-16 nature-card p-8 md:p-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-            <div className="order-2 lg:order-1 space-y-6">
-              <h3 className="text-3xl font-bold">
-                Powered by <span className="text-gradient">Advanced AI</span>
-              </h3>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Our cutting-edge artificial intelligence has been trained on millions of plant images to provide you with the most accurate identification results. Whether it's a common houseplant or a rare wildflower, UseVerdant can identify it.
-              </p>
-              <div className="grid grid-cols-2 gap-4 text-sm">
-                <div className="space-y-2">
-                  <div className="font-semibold text-success">50,000+</div>
-                  <div className="text-muted-foreground">Plant species</div>
-                </div>
-                <div className="space-y-2">
-                  <div className="font-semibold text-success">95%</div>
-                  <div className="text-muted-foreground">Accuracy rate</div>
-                </div>
-              </div>
-            </div>
-            
-            <div className="order-1 lg:order-2 flex justify-center">
-              <img
-                src={aiPlantIcon}
-                alt="AI plant identification technology"
-                className="w-64 h-64 object-contain floating-animation"
-              />
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );

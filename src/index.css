@@ -39,8 +39,8 @@ All colors MUST be HSL.
     --nature-forest: 130 50% 30%;
     --nature-emerald: 140 70% 40%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 120 20% 98%;
 
     --border: 130 20% 88%;
     --input: 130 20% 90%;
@@ -58,21 +58,14 @@ All colors MUST be HSL.
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 120 20% 98%;
+    --sidebar-foreground: 140 15% 45%;
+    --sidebar-primary: 135 60% 35%;
+    --sidebar-primary-foreground: 120 20% 98%;
+    --sidebar-accent: 130 20% 95%;
+    --sidebar-accent-foreground: 140 40% 20%;
+    --sidebar-border: 130 20% 88%;
+    --sidebar-ring: 135 60% 35%;
   }
 
   .dark {

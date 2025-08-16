@@ -39,8 +39,8 @@ All colors MUST be HSL.
     --nature-forest: 130 50% 30%;
     --nature-emerald: 140 70% 40%;
 
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 120 20% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
 
     --border: 130 20% 88%;
     --input: 130 20% 90%;
@@ -54,18 +54,30 @@ All colors MUST be HSL.
     --gradient-nature: linear-gradient(180deg, hsl(var(--nature-mint)) 0%, hsl(var(--background)) 100%);
     --gradient-card: linear-gradient(145deg, hsl(var(--card)) 0%, hsl(var(--nature-mint)) 100%);
 
+    /* Shadows */
+    --shadow-soft: 0 4px 20px hsl(var(--primary) / 0.1);
+    --shadow-nature: 0 8px 40px hsl(var(--success) / 0.15);
+    --shadow-hero: 0 20px 60px hsl(var(--primary-dark) / 0.2);
+
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
-    --sidebar-background: 120 20% 98%;
-    --sidebar-foreground: 140 15% 45%;
-    --sidebar-primary: 135 60% 35%;
-    --sidebar-primary-foreground: 120 20% 98%;
-    --sidebar-accent: 130 20% 95%;
-    --sidebar-accent-foreground: 140 40% 20%;
-    --sidebar-border: 130 20% 88%;
-    --sidebar-ring: 135 60% 35%;
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
@@ -148,9 +160,9 @@ All colors MUST be HSL.
 
   .nature-card {
     @apply bg-gradient-to-br from-card to-nature-mint/20 
-           border border-nature-sage/20 shadow-md 
-           hover:shadow-lg transition-all duration-300 
-           hover:-translate-y-1 rounded-lg;
+           border-nature-sage/20 shadow-soft 
+           hover:shadow-nature transition-all duration-300 
+           hover:-translate-y-1;
   }
 
   .feature-icon {
@@ -161,7 +173,7 @@ All colors MUST be HSL.
   }
 
   .app-mockup {
-    @apply drop-shadow-2xl hover:drop-shadow-2xl 
+    @apply drop-shadow-2xl hover:drop-shadow-hero 
            transition-all duration-500 transform 
            hover:scale-105 hover:rotate-2;
   }

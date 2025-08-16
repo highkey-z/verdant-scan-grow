@@ -1,90 +1,101 @@
 import { Mountain, Leaf, GraduationCap } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 const Benefits = () => {
-  const profiles = [
+  const benefits = [
     {
       icon: Mountain,
-      title: "Trail Explorers",
-      quote: "Every hike becomes a discovery",
-      description: "Turn nature walks into learning adventures",
-      image: "🥾"
+      title: "For Nature Lovers",
+      description: "Transform your hikes and outdoor adventures into learning experiences",
+      details: [
+        "Identify wildflowers and trees on trails",
+        "Learn about local ecosystems",
+        "Discover new species in your area",
+        "Build your nature knowledge"
+      ]
     },
     {
       icon: Leaf,
-      title: "Garden Enthusiasts",
-      quote: "Know what grows in your space",
-      description: "Master your garden ecosystem",
-      image: "🌱"
+      title: "For Gardeners",
+      description: "Become a more knowledgeable and successful gardener",
+      details: [
+        "Identify weeds vs. beneficial plants",
+        "Spot plant diseases early",
+        "Learn optimal growing conditions",
+        "Get expert care recommendations"
+      ]
     },
     {
       icon: GraduationCap,
-      title: "Students & Researchers",
-      quote: "Field work made simple",
-      description: "Academic botany at your fingertips",
-      image: "📚"
+      title: "For Students",
+      description: "Perfect study companion for botany and biology courses",
+      details: [
+        "Study plant families and characteristics",
+        "Complete field work assignments",
+        "Build botanical vocabulary",
+        "Access detailed plant information"
+      ]
     }
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-b from-background via-nature-mint/3 to-background">
+    <section className="section-padding bg-gradient-to-b from-background to-nature-mint/5">
       <div className="container-width">
-        {/* Offset Header */}
-        <div className="max-w-2xl mb-20 ml-0 lg:ml-16">
-          <h2 className="text-4xl font-black mb-6">
-            Made for curious minds
+        <div className="text-center space-y-4 mb-16">
+          <h2 className="text-4xl sm:text-5xl font-bold">
+            Perfect <span className="text-gradient">For Everyone</span>
           </h2>
-          <p className="text-lg text-muted-foreground">
-            Whether you're hiking mountain trails, tending your garden, or studying for exams—UseVerdant adapts to your world.
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            Whether you're exploring nature, tending your garden, or studying botany
           </p>
         </div>
 
-        {/* Staggered Cards */}
-        <div className="space-y-16">
-          {profiles.map((profile, index) => (
-            <div key={index} className={`grid grid-cols-12 gap-8 items-center ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
-              <div className={`col-span-12 lg:col-span-6 ${index % 2 === 1 ? 'lg:col-start-7' : ''}`}>
-                <div className="space-y-6">
-                  <div className="text-6xl">{profile.image}</div>
-                  <div>
-                    <h3 className="text-2xl font-bold mb-2">{profile.title}</h3>
-                    <p className="text-lg italic text-primary mb-4">"{profile.quote}"</p>
-                    <p className="text-muted-foreground">{profile.description}</p>
-                  </div>
-                </div>
-              </div>
-              
-              <div className={`col-span-12 lg:col-span-5 ${index % 2 === 1 ? 'lg:col-start-1' : 'lg:col-start-8'}`}>
-                <div className="bg-card border rounded-2xl p-8 relative overflow-hidden">
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-primary/5 to-transparent"></div>
-                  <profile.icon className="w-12 h-12 text-primary mb-4" />
-                  <div className="space-y-3 text-sm text-muted-foreground">
-                    <div className="flex items-center gap-2">
-                      <div className="w-1 h-1 bg-success rounded-full"></div>
-                      <span>Real-time identification</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <div className="w-1 h-1 bg-success rounded-full"></div>
-                      <span>Offline capability</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <div className="w-1 h-1 bg-success rounded-full"></div>
-                      <span>Detailed plant profiles</span>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {benefits.map((benefit, index) => (
+            <div key={index} className="group">
+              <div className="nature-card p-8 h-full space-y-6">
+                <div className="text-center space-y-4">
+                  <div className="flex justify-center">
+                    <div className="feature-icon">
+                      <benefit.icon className="w-full h-full" />
                     </div>
                   </div>
+                  
+                  <div className="space-y-2">
+                    <h3 className="text-xl font-semibold">{benefit.title}</h3>
+                    <p className="text-muted-foreground">{benefit.description}</p>
+                  </div>
                 </div>
+
+                <ul className="space-y-3">
+                  {benefit.details.map((detail, detailIndex) => (
+                    <li key={detailIndex} className="flex items-start gap-3 text-sm">
+                      <div className="w-1.5 h-1.5 bg-success rounded-full mt-2 flex-shrink-0"></div>
+                      <span className="text-foreground/80">{detail}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Bottom CTA */}
-        <div className="mt-32 text-center">
-          <div className="max-w-md mx-auto space-y-6">
-            <h3 className="text-2xl font-bold">Start exploring today</h3>
-            <Button className="w-full bg-foreground text-background hover:bg-foreground/90 rounded-full">
-              Get UseVerdant Free
-            </Button>
+        {/* Call to Action */}
+        <div className="mt-16 text-center">
+          <div className="nature-card p-8 max-w-2xl mx-auto">
+            <h3 className="text-2xl font-bold mb-4">
+              Ready to Start Your <span className="text-gradient">Plant Journey?</span>
+            </h3>
+            <p className="text-muted-foreground mb-6">
+              Join thousands of users who are already discovering the world of plants with UseVerdant
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="hero-button px-6 py-3 rounded-lg font-medium transition-all duration-300">
+                Download for iOS
+              </button>
+              <button className="hero-button px-6 py-3 rounded-lg font-medium transition-all duration-300">
+                Download for Android
+              </button>
+            </div>
           </div>
         </div>
       </div>

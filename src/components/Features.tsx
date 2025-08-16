@@ -2,107 +2,90 @@ import { Brain, BookOpen, Clock, Users } from "lucide-react";
 import aiPlantIcon from "@/assets/ai-plant-icon.png";
 
 const Features = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: "AI Plant Recognition",
+      description: "Advanced machine learning algorithms identify plants with 95% accuracy from a single photo"
+    },
+    {
+      icon: BookOpen,
+      title: "Care Tips & Advice",
+      description: "Get personalized growing tips, watering schedules, and expert gardening advice for each plant"
+    },
+    {
+      icon: Clock,
+      title: "Scan History",
+      description: "Keep track of all your plant discoveries with a comprehensive history of your scans"
+    },
+    {
+      icon: Users,
+      title: "Community Sharing",
+      description: "Share your plant discoveries with fellow nature enthusiasts and build your botanical knowledge"
+    }
+  ];
+
   return (
-    <section className="py-32 relative">
+    <section className="section-padding">
       <div className="container-width">
-        {/* Unconventional Header */}
-        <div className="max-w-3xl mb-24">
-          <div className="flex items-start gap-6">
-            <div className="w-px h-16 bg-gradient-to-b from-primary to-transparent"></div>
-            <div>
-              <h2 className="text-5xl font-black mb-4">
-                How it works
-              </h2>
-              <p className="text-lg text-muted-foreground">
-                Three simple steps to unlock the secret life of plants around you.
-              </p>
-            </div>
-          </div>
+        <div className="text-center space-y-4 mb-16">
+          <h2 className="text-4xl sm:text-5xl font-bold">
+            Powerful <span className="text-gradient">Features</span>
+          </h2>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            Everything you need to become a plant identification expert
+          </p>
         </div>
 
-        {/* Stepped Layout */}
-        <div className="space-y-32">
-          {/* Step 1 */}
-          <div className="grid grid-cols-12 gap-8 items-center">
-            <div className="col-span-12 lg:col-span-5">
-              <div className="space-y-6">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-foreground text-background flex items-center justify-center font-bold">01</div>
-                  <div className="h-px flex-1 bg-gradient-to-r from-foreground/20 to-transparent"></div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {features.map((feature, index) => (
+            <div key={index} className="group">
+              <div className="nature-card p-6 h-full text-center space-y-6">
+                <div className="flex justify-center">
+                  <div className="feature-icon">
+                    <feature.icon className="w-full h-full" />
+                  </div>
                 </div>
-                <h3 className="text-3xl font-bold">Point & Capture</h3>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  Open the app, point your camera at any plant, and take a photo. Our AI instantly analyzes the image in real-time.
-                </p>
-                <div className="flex items-center gap-3 text-sm">
-                  <Brain className="w-4 h-4 text-primary" />
-                  <span className="text-muted-foreground">Advanced neural networks</span>
+                
+                <div className="space-y-3">
+                  <h3 className="text-lg font-semibold">{feature.title}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    {feature.description}
+                  </p>
                 </div>
               </div>
             </div>
-            <div className="col-span-12 lg:col-span-6 lg:col-start-7">
-              <div className="bg-gradient-to-br from-nature-mint/10 to-success/5 rounded-3xl p-8 relative overflow-hidden">
-                <div className="absolute top-4 right-4 w-20 h-20 rounded-full bg-primary/10 blur-2xl"></div>
-                <div className="w-full h-64 bg-card rounded-xl flex items-center justify-center">
-                  <Brain className="w-16 h-16 text-primary" />
-                </div>
-              </div>
-            </div>
-          </div>
+          ))}
+        </div>
 
-          {/* Step 2 */}
-          <div className="grid grid-cols-12 gap-8 items-center">
-            <div className="col-span-12 lg:col-span-6 order-2 lg:order-1">
-              <div className="bg-gradient-to-br from-primary/5 to-nature-emerald/10 rounded-3xl p-8 relative overflow-hidden">
-                <div className="absolute bottom-4 left-4 w-16 h-16 rounded-full bg-success/10 blur-2xl"></div>
-                <div className="w-full h-64 bg-card rounded-xl flex items-center justify-center">
-                  <BookOpen className="w-16 h-16 text-success" />
+        {/* Feature Highlight */}
+        <div className="mt-16 nature-card p-8 md:p-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <div className="order-2 lg:order-1 space-y-6">
+              <h3 className="text-3xl font-bold">
+                Powered by <span className="text-gradient">Advanced AI</span>
+              </h3>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Our cutting-edge artificial intelligence has been trained on millions of plant images to provide you with the most accurate identification results. Whether it's a common houseplant or a rare wildflower, UseVerdant can identify it.
+              </p>
+              <div className="grid grid-cols-2 gap-4 text-sm">
+                <div className="space-y-2">
+                  <div className="font-semibold text-success">50,000+</div>
+                  <div className="text-muted-foreground">Plant species</div>
+                </div>
+                <div className="space-y-2">
+                  <div className="font-semibold text-success">95%</div>
+                  <div className="text-muted-foreground">Accuracy rate</div>
                 </div>
               </div>
             </div>
-            <div className="col-span-12 lg:col-span-5 lg:col-start-8 order-1 lg:order-2">
-              <div className="space-y-6">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-foreground text-background flex items-center justify-center font-bold">02</div>
-                  <div className="h-px flex-1 bg-gradient-to-r from-foreground/20 to-transparent"></div>
-                </div>
-                <h3 className="text-3xl font-bold">Instant Results</h3>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  Get detailed information about your plant including scientific name, common names, and key characteristics.
-                </p>
-                <div className="flex items-center gap-3 text-sm">
-                  <BookOpen className="w-4 h-4 text-success" />
-                  <span className="text-muted-foreground">Comprehensive plant database</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Step 3 */}
-          <div className="grid grid-cols-12 gap-8 items-center">
-            <div className="col-span-12 lg:col-span-5">
-              <div className="space-y-6">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-foreground text-background flex items-center justify-center font-bold">03</div>
-                  <div className="h-px flex-1 bg-gradient-to-r from-foreground/20 to-transparent"></div>
-                </div>
-                <h3 className="text-3xl font-bold">Learn & Grow</h3>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  Save your discoveries, get care instructions, and build your personal plant collection over time.
-                </p>
-                <div className="flex items-center gap-3 text-sm">
-                  <Clock className="w-4 h-4 text-nature-emerald" />
-                  <span className="text-muted-foreground">Personal plant journal</span>
-                </div>
-              </div>
-            </div>
-            <div className="col-span-12 lg:col-span-6 lg:col-start-7">
-              <div className="bg-gradient-to-br from-nature-emerald/5 to-primary/10 rounded-3xl p-8 relative overflow-hidden">
-                <div className="absolute top-1/2 right-8 w-12 h-12 rounded-full bg-nature-emerald/10 blur-xl"></div>
-                <div className="w-full h-64 bg-card rounded-xl flex items-center justify-center">
-                  <Clock className="w-16 h-16 text-nature-emerald" />
-                </div>
-              </div>
+            
+            <div className="order-1 lg:order-2 flex justify-center">
+              <img
+                src={aiPlantIcon}
+                alt="AI plant identification technology"
+                className="w-64 h-64 object-contain floating-animation"
+              />
             </div>
           </div>
         </div>

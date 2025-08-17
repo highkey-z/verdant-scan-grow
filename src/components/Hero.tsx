@@ -12,23 +12,23 @@ import bubblePlant6 from "@/assets/bubble-plant-6.png";
 const Hero = () => {
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-nature-mint/20 via-background to-success/10 min-h-[90vh]">
-      {/* Plant Image Bubbles - Positioned in blank spaces only */}
-      <div className="absolute top-20 left-20 w-16 h-16 rounded-full border-4 border-white shadow-lg overflow-hidden">
+      {/* Small Plant Bubbles - Decorative only, positioned in empty spaces */}
+      <div className="absolute top-32 left-8 w-12 h-12 rounded-full border-2 border-white shadow-lg overflow-hidden">
         <img src={bubblePlant1} alt="Succulent plant" className="w-full h-full object-cover" />
       </div>
-      <div className="absolute top-96 right-24 w-20 h-20 rounded-full border-4 border-white shadow-lg overflow-hidden">
+      <div className="absolute top-80 right-12 w-10 h-10 rounded-full border-2 border-white shadow-lg overflow-hidden">
         <img src={bubblePlant2} alt="Lavender flowers" className="w-full h-full object-cover" />
       </div>
-      <div className="absolute bottom-48 left-24 w-18 h-18 rounded-full border-4 border-white shadow-lg overflow-hidden">
+      <div className="absolute bottom-40 left-12 w-14 h-14 rounded-full border-2 border-white shadow-lg overflow-hidden">
         <img src={bubblePlant3} alt="Fern fronds" className="w-full h-full object-cover" />
       </div>
-      <div className="absolute top-72 right-1/4 w-14 h-14 rounded-full border-4 border-white shadow-lg overflow-hidden">
+      <div className="absolute top-96 right-32 w-8 h-8 rounded-full border-2 border-white shadow-lg overflow-hidden">
         <img src={bubblePlant4} alt="Sunflower bloom" className="w-full h-full object-cover" />
       </div>
-      <div className="absolute bottom-32 left-1/3 w-16 h-16 rounded-full border-4 border-white shadow-lg overflow-hidden">
+      <div className="absolute bottom-24 left-32 w-12 h-12 rounded-full border-2 border-white shadow-lg overflow-hidden">
         <img src={bubblePlant5} alt="Cactus flower" className="w-full h-full object-cover" />
       </div>
-      <div className="absolute top-1/2 left-16 w-14 h-14 rounded-full border-4 border-white shadow-lg overflow-hidden">
+      <div className="absolute top-1/2 left-4 w-10 h-10 rounded-full border-2 border-white shadow-lg overflow-hidden">
         <img src={bubblePlant6} alt="Ivy leaves" className="w-full h-full object-cover" />
       </div>
 

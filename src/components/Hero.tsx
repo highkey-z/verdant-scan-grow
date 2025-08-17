@@ -1,41 +1,35 @@
 import { Button } from "@/components/ui/button";
-import { Download, Play, Star, Camera, Leaf, Flower, TreePine, Sprout, Cherry, Shield, Heart, Droplets, Sun, Users, Recycle } from "lucide-react";
+import { Download, Play, Star, Camera, Leaf, Flower, TreePine, Sprout, Cherry, Shield, Heart, Droplets, Sun, Users, Recycle, Image } from "lucide-react";
 import qrCode from "@/assets/qr-code.png";
 import roseCameraView from "@/assets/rose-camera-view.jpg";
+import bubblePlant1 from "@/assets/bubble-plant-1.png";
+import bubblePlant2 from "@/assets/bubble-plant-2.png";
+import bubblePlant3 from "@/assets/bubble-plant-3.png";
+import bubblePlant4 from "@/assets/bubble-plant-4.png";
+import bubblePlant5 from "@/assets/bubble-plant-5.png";
+import bubblePlant6 from "@/assets/bubble-plant-6.png";
 
 const Hero = () => {
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-nature-mint/20 via-background to-success/10 min-h-[90vh]">
-      {/* Floating Plant Bubbles - Circular with white borders */}
-      <div className="absolute top-20 left-16 w-20 h-20 bg-white rounded-full border-2 border-white shadow-lg flex items-center justify-center">
-        <Leaf className="w-8 h-8 text-green-600" />
+      {/* Plant Image Bubbles - Positioned in blank spaces only */}
+      <div className="absolute top-20 left-20 w-16 h-16 rounded-full border-4 border-white shadow-lg overflow-hidden">
+        <img src={bubblePlant1} alt="Succulent plant" className="w-full h-full object-cover" />
       </div>
-      <div className="absolute top-32 right-32 w-16 h-16 bg-white rounded-full border-2 border-white shadow-lg flex items-center justify-center">
-        <Flower className="w-6 h-6 text-pink-500" />
+      <div className="absolute top-96 right-24 w-20 h-20 rounded-full border-4 border-white shadow-lg overflow-hidden">
+        <img src={bubblePlant2} alt="Lavender flowers" className="w-full h-full object-cover" />
       </div>
-      <div className="absolute top-48 left-32 w-18 h-18 bg-white rounded-full border-2 border-white shadow-lg flex items-center justify-center">
-        <TreePine className="w-7 h-7 text-green-700" />
+      <div className="absolute bottom-48 left-24 w-18 h-18 rounded-full border-4 border-white shadow-lg overflow-hidden">
+        <img src={bubblePlant3} alt="Fern fronds" className="w-full h-full object-cover" />
       </div>
-      <div className="absolute top-24 right-1/4 w-14 h-14 bg-white rounded-full border-2 border-white shadow-lg flex items-center justify-center">
-        <Sprout className="w-5 h-5 text-green-500" />
+      <div className="absolute top-72 right-1/4 w-14 h-14 rounded-full border-4 border-white shadow-lg overflow-hidden">
+        <img src={bubblePlant4} alt="Sunflower bloom" className="w-full h-full object-cover" />
       </div>
-      <div className="absolute bottom-40 right-20 w-20 h-20 bg-white rounded-full border-2 border-white shadow-lg flex items-center justify-center">
-        <Cherry className="w-8 h-8 text-red-500" />
+      <div className="absolute bottom-32 left-1/3 w-16 h-16 rounded-full border-4 border-white shadow-lg overflow-hidden">
+        <img src={bubblePlant5} alt="Cactus flower" className="w-full h-full object-cover" />
       </div>
-      <div className="absolute top-40 left-1/2 w-16 h-16 bg-white rounded-full border-2 border-white shadow-lg flex items-center justify-center">
-        <Leaf className="w-6 h-6 text-green-600 rotate-45" />
-      </div>
-      <div className="absolute bottom-56 left-20 w-18 h-18 bg-white rounded-full border-2 border-white shadow-lg flex items-center justify-center">
-        <Flower className="w-7 h-7 text-purple-500" />
-      </div>
-      <div className="absolute top-64 right-1/3 w-14 h-14 bg-white rounded-full border-2 border-white shadow-lg flex items-center justify-center">
-        <Sprout className="w-5 h-5 text-lime-500" />
-      </div>
-      <div className="absolute bottom-32 right-1/2 w-16 h-16 bg-white rounded-full border-2 border-white shadow-lg flex items-center justify-center">
-        <TreePine className="w-6 h-6 text-emerald-600" />
-      </div>
-      <div className="absolute top-1/2 right-16 w-14 h-14 bg-white rounded-full border-2 border-white shadow-lg flex items-center justify-center">
-        <Leaf className="w-5 h-5 text-green-500" />
+      <div className="absolute top-1/2 left-16 w-14 h-14 rounded-full border-4 border-white shadow-lg overflow-hidden">
+        <img src={bubblePlant6} alt="Ivy leaves" className="w-full h-full object-cover" />
       </div>
 
       <div className="container-width py-16">
@@ -60,7 +54,7 @@ const Hero = () => {
                   <img src={qrCode} alt="Download QR Code" className="w-20 h-20" />
                 </div>
                 <div className="space-y-3">
-                  <Button size="lg" className="bg-black text-white hover:bg-black/90 flex items-center gap-3 px-6 rounded-xl">
+                  <Button size="lg" className="bg-black text-white hover:bg-black/90 flex items-center gap-3 px-6 rounded-xl w-64">
                     <div className="w-6 h-6 bg-white rounded-sm flex items-center justify-center">
                       <svg className="w-4 h-4" viewBox="0 0 24 24" fill="black">
                         <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
@@ -71,9 +65,12 @@ const Hero = () => {
                       <div className="font-semibold">App Store</div>
                     </div>
                   </Button>
-                  <Button size="lg" className="bg-black text-white hover:bg-black/90 flex items-center gap-3 px-6 rounded-xl">
-                    <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M22,9.3c-0.6,0-1.1,0.5-1.1,1.1s0.5,1.1,1.1,1.1s1.1-0.5,1.1-1.1S22.6,9.3,22,9.3z M13.4,2.1L3.1,8.1c-0.4,0.2-0.4,0.8,0,1l10.3,6c0.4,0.2,0.9,0.2,1.3,0l10.3-6c0.4-0.2,0.4-0.8,0-1L14.7,2.1C14.3,1.9,13.8,1.9,13.4,2.1z M14,14.8l-1.8,1.1c-0.1,0.1-0.3,0.1-0.4,0L10,14.8L3.5,10.5l6.5,3.8l4-2.3l4,2.3L14,14.8z"/>
+                  <Button size="lg" className="bg-black text-white hover:bg-black/90 flex items-center gap-3 px-6 rounded-xl w-64">
+                    <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
+                      <path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.609-.92z" fill="#EA4335"/>
+                      <path d="M13.792 12L3.609 1.814a1.006 1.006 0 01.703-.269 1.006 1.006 0 01.703.269L16.5 7.5 13.792 12z" fill="#FBBC04"/>
+                      <path d="M13.792 12L16.5 16.5 5.015 22.186a1.006 1.006 0 01-.703.269 1.006 1.006 0 01-.703-.269L13.792 12z" fill="#34A853"/>
+                      <path d="M13.792 12L16.5 7.5l4.146-2.341a1 1 0 01.354.734v9.107a1 1 0 01-.354.734L16.5 16.5 13.792 12z" fill="#4285F4"/>
                     </svg>
                     <div className="text-left">
                       <div className="text-xs opacity-80">GET IT ON</div>
@@ -115,10 +112,10 @@ const Hero = () => {
                     
                     {/* Camera UI Overlay */}
                     <div className="absolute inset-0 flex flex-col justify-between p-6">
-                      {/* Top UI */}
+                      {/* Top UI - removed Unlimited IDs */}
                       <div className="flex items-center justify-between text-white">
                         <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
-                        <div className="text-sm font-medium bg-black/50 px-3 py-1 rounded-full">Unlimited IDs</div>
+                        <div className="text-sm font-medium bg-black/50 px-3 py-1 rounded-full">Camera View</div>
                         <div className="w-6 h-6"></div>
                       </div>
                       
@@ -135,7 +132,9 @@ const Hero = () => {
                       {/* Bottom UI */}
                       <div className="flex justify-between items-center">
                         <div className="text-center">
-                          <div className="w-8 h-8 bg-white/20 rounded-full mb-1 mx-auto"></div>
+                          <div className="w-8 h-8 bg-white/20 rounded-full mb-1 mx-auto flex items-center justify-center">
+                            <Image className="w-4 h-4 text-white" />
+                          </div>
                           <span className="text-xs text-white">Gallery</span>
                         </div>
                         <div className="w-16 h-16 bg-white rounded-full border-4 border-white/50 flex items-center justify-center">

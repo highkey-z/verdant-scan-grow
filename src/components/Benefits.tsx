@@ -38,7 +38,7 @@ const Benefits = () => {
   ];
 
   return (
-    <section className="section-padding bg-gradient-to-br from-nature-mint/5 via-background to-success/8 relative overflow-hidden">
+    <section id="perfect-for-everyone" className="section-padding bg-gradient-to-br from-nature-mint/5 via-background to-success/8 relative overflow-hidden">
       {/* Background Design Elements */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Clean SVG Plant Icons */}
@@ -182,7 +182,7 @@ const Benefits = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="mt-16 text-center">
+        <div id="ready-to-start" className="mt-16 text-center">
           <div className="nature-card p-8 max-w-2xl mx-auto">
             <h3 className="text-2xl font-bold mb-4">
               Ready to Start Your <span className="text-gradient">Plant Journey?</span>

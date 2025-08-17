@@ -18,13 +18,13 @@ const Navigation = () => {
             <a href="#" className="text-foreground/70 hover:text-primary transition-colors">
               Home
             </a>
-            <a href="#" className="text-foreground/70 hover:text-primary transition-colors">
+            <a href="#perfect-for-everyone" className="text-foreground/70 hover:text-primary transition-colors">
               Application
             </a>
-            <a href="#" className="text-foreground/70 hover:text-primary transition-colors">
+            <a href="#ready-to-start" className="text-foreground/70 hover:text-primary transition-colors">
               Download
             </a>
-            <a href="#" className="text-foreground/70 hover:text-primary transition-colors">
+            <a href="/faq" className="text-foreground/70 hover:text-primary transition-colors">
               FAQ
             </a>
             <div className="flex items-center gap-2 text-foreground/70 hover:text-primary transition-colors cursor-pointer">

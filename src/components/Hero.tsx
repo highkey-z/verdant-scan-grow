@@ -2,73 +2,116 @@ import { Button } from "@/components/ui/button";
 import { Download, Play, Star, Camera, Leaf, Flower, TreePine, Sprout, Cherry, Shield, Heart, Droplets, Sun, Users, Recycle, Image } from "lucide-react";
 import qrCode from "@/assets/qr-code.png";
 import roseCameraView from "@/assets/rose-camera-view.jpg";
-import plant1 from "@/assets/plant-1-sunflower.jpg";
-import plant2 from "@/assets/plant-2-lavender.jpg";
-import plant3 from "@/assets/plant-3-fern.jpg";
-import plant4 from "@/assets/plant-4-orchid.jpg";
-import plant5 from "@/assets/plant-5-succulent.jpg";
-import plant6 from "@/assets/plant-6-cherry-blossom.jpg";
-import plant7 from "@/assets/plant-7-monstera.jpg";
-import plant8 from "@/assets/plant-8-tulip.jpg";
-import plant9 from "@/assets/plant-9-cactus.jpg";
-import plant10 from "@/assets/plant-10-hydrangea.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { useEffect, useState } from "react";
 
 const Hero = () => {
   const { t } = useLanguage();
-  const [currentPlantIndex, setCurrentPlantIndex] = useState(0);
-  
-  const plants = [
-    { image: plant1, name: "Sunflower" },
-    { image: plant2, name: "Lavender" },
-    { image: plant3, name: "Fern" },
-    { image: plant4, name: "Orchid" },
-    { image: plant5, name: "Succulent" },
-    { image: plant6, name: "Cherry Blossom" },
-    { image: plant7, name: "Monstera" },
-    { image: plant8, name: "Tulip" },
-    { image: plant9, name: "Cactus" },
-    { image: plant10, name: "Hydrangea" }
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentPlantIndex((prev) => (prev + 1) % plants.length);
-    }, 2000);
-    return () => clearInterval(interval);
-  }, [plants.length]);
   
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-emerald-50 via-white to-teal-50 min-h-[90vh]">
-      {/* Elegant Organic Background Design */}
+      {/* Enhanced Background Design */}
       <div className="absolute inset-0">
-        {/* Large leaf silhouette - top left */}
-        <div className="absolute -top-20 -left-32 w-80 h-96 opacity-20">
-          <svg viewBox="0 0 200 240" className="w-full h-full text-emerald-300">
-            <path d="M100 20 Q40 60 50 120 Q60 180 100 220 Q140 180 150 120 Q160 60 100 20" fill="currentColor" />
-          </svg>
+        {/* Large decorative circles */}
+        <div className="absolute -top-32 -right-32 w-96 h-96 border-4 border-emerald-200/60 rounded-full animate-pulse"></div>
+        <div className="absolute -bottom-32 -left-32 w-80 h-80 border-4 border-teal-200/60 rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
+        
+        {/* Medium decorative elements */}
+        <div className="absolute top-1/4 right-1/4 w-48 h-48 bg-gradient-to-br from-emerald-100/80 to-emerald-200/40 rounded-3xl rotate-12 shadow-lg hover-scale"></div>
+        <div className="absolute bottom-1/4 left-1/3 w-32 h-32 bg-gradient-to-tr from-teal-100/80 to-teal-200/40 rounded-2xl -rotate-12 shadow-lg hover-scale"></div>
+        
+        {/* Additional geometric shapes */}
+        <div className="absolute top-16 right-1/2 w-24 h-24 bg-gradient-to-br from-rose-100/70 to-pink-200/40 rounded-full shadow-md"></div>
+        <div className="absolute bottom-16 right-1/4 w-36 h-36 border-3 border-emerald-300/50 rounded-lg rotate-45"></div>
+        
+        {/* More Glowing Plant Icons */}
+        <div className="absolute top-1/4 left-8">
+          <Leaf className="w-8 h-8 text-emerald-400/70 transform rotate-12 animate-pulse drop-shadow-lg" />
+        </div>
+        <div className="absolute bottom-1/3 right-8">
+          <Flower className="w-6 h-6 text-rose-400/70 transform -rotate-12 animate-pulse drop-shadow-lg" style={{animationDelay: '0.5s'}} />
+        </div>
+        <div className="absolute top-2/3 left-1/5">
+          <Sprout className="w-7 h-7 text-teal-400/70 transform rotate-45 animate-pulse drop-shadow-lg" style={{animationDelay: '1.5s'}} />
+        </div>
+        <div className="absolute top-16 left-1/2">
+          <TreePine className="w-6 h-6 text-emerald-400/70 transform -rotate-30 animate-pulse drop-shadow-lg" style={{animationDelay: '0.8s'}} />
+        </div>
+        <div className="absolute bottom-20 left-16">
+          <Cherry className="w-5 h-5 text-rose-400/70 transform rotate-60 animate-pulse drop-shadow-lg" style={{animationDelay: '1.2s'}} />
+        </div>
+        <div className="absolute top-1/2 right-20">
+          <Flower className="w-7 h-7 text-pink-400/70 transform rotate-90 animate-pulse drop-shadow-lg" style={{animationDelay: '2s'}} />
+        </div>
+        <div className="absolute bottom-1/2 left-8">
+          <Leaf className="w-6 h-6 text-teal-400/70 transform -rotate-45 animate-pulse drop-shadow-lg" style={{animationDelay: '0.3s'}} />
+        </div>
+        <div className="absolute top-3/4 right-16">
+          <Sprout className="w-5 h-5 text-emerald-400/70 transform rotate-12 animate-pulse drop-shadow-lg" style={{animationDelay: '1.8s'}} />
         </div>
         
-        {/* Rounded blob - top right */}
-        <div className="absolute -top-16 -right-24 w-64 h-72 bg-gradient-to-br from-teal-200/30 to-emerald-200/20 rounded-[50%_60%_70%_40%] transform rotate-12"></div>
-        
-        {/* Watercolor splotch - bottom left */}
-        <div className="absolute -bottom-32 -left-20 w-96 h-80 bg-gradient-to-tr from-rose-200/25 to-pink-200/15 rounded-[60%_40%_30%_70%] transform -rotate-12"></div>
-        
-        {/* Organic shape - center right */}
-        <div className="absolute top-1/3 -right-16 w-48 h-64 bg-gradient-to-bl from-emerald-300/20 to-teal-300/10 rounded-[40%_60%_60%_40%] transform rotate-45"></div>
-        
-        {/* Leaf pattern - bottom center */}
-        <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 w-32 h-40 opacity-15">
-          <svg viewBox="0 0 100 120" className="w-full h-full text-nature-600">
-            <path d="M50 10 Q20 30 25 60 Q30 90 50 110 Q70 90 75 60 Q80 30 50 10" fill="currentColor" />
-          </svg>
+        {/* Geometric grid pattern */}
+        <div className="absolute top-16 left-16 grid grid-cols-4 gap-8 opacity-30">
+          {[...Array(16)].map((_, i) => (
+            <div key={i} className="w-3 h-3 bg-emerald-300 rounded-full animate-pulse" style={{animationDelay: `${i * 0.1}s`}}></div>
+          ))}
         </div>
         
-        {/* Floating organic elements */}
-        <div className="absolute top-20 left-1/4 w-16 h-24 bg-gradient-to-b from-emerald-400/20 to-transparent rounded-[50%] transform rotate-45"></div>
-        <div className="absolute bottom-32 right-1/4 w-20 h-28 bg-gradient-to-t from-teal-400/15 to-transparent rounded-[60%_40%] transform -rotate-30"></div>
+        {/* Additional dot patterns */}
+        <div className="absolute bottom-32 right-16 grid grid-cols-3 gap-6 opacity-40">
+          {[...Array(9)].map((_, i) => (
+            <div key={i} className="w-2 h-2 bg-teal-400 rounded-full animate-pulse" style={{animationDelay: `${i * 0.2}s`}}></div>
+          ))}
+        </div>
+        
+        {/* Corner accent triangles */}
+        <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-emerald-200/50 to-transparent transform rotate-45 translate-x-16 -translate-y-16"></div>
+        <div className="absolute bottom-0 right-0 w-24 h-24 bg-gradient-to-tr from-teal-200/50 to-transparent transform rotate-45 translate-x-12 translate-y-12"></div>
+        
+        {/* Enhanced floating hexagons */}
+        <div className="absolute top-32 right-1/3 w-16 h-16 border-2 border-emerald-300/70 transform rotate-30 hover-scale" style={{clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)'}}>
+        </div>
+        <div className="absolute bottom-32 right-1/3 w-12 h-12 border-2 border-teal-300/70 transform -rotate-30 hover-scale" style={{clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)'}}>
+        </div>
+        <div className="absolute top-3/4 right-1/4 w-14 h-14 border-2 border-rose-300/70 transform rotate-60 hover-scale" style={{clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)'}}>
+        </div>
+        
+        {/* Radial burst pattern */}
+        <div className="absolute top-1/3 left-1/2 transform -translate-x-1/2">
+          <div className="w-1 h-16 bg-gradient-to-t from-emerald-300/60 to-transparent"></div>
+          <div className="w-1 h-16 bg-gradient-to-t from-emerald-300/60 to-transparent absolute top-0 left-0 transform rotate-45"></div>
+          <div className="w-1 h-16 bg-gradient-to-t from-emerald-300/60 to-transparent absolute top-0 left-0 transform rotate-90"></div>
+          <div className="w-1 h-16 bg-gradient-to-t from-emerald-300/60 to-transparent absolute top-0 left-0 transform rotate-135"></div>
+        </div>
+        
+        {/* Floating diamond shapes */}
+        <div className="absolute top-20 left-1/3 w-6 h-6 bg-gradient-to-br from-emerald-200/80 to-emerald-300/60 transform rotate-45 animate-pulse"></div>
+        <div className="absolute bottom-20 right-1/3 w-8 h-8 bg-gradient-to-br from-teal-200/80 to-teal-300/60 transform rotate-45 animate-pulse" style={{animationDelay: '0.7s'}}></div>
+      </div>
+      {/* Plant Bubbles - Positioned in safe areas with white borders */}
+      
+      {/* Above UseVerdant title */}
+      <div className="absolute top-8 left-1/4 w-16 h-16 rounded-full border-4 border-white shadow-lg overflow-hidden bg-white hover-scale">
+        <img src="/lovable-uploads/8a403ba0-c447-4350-8503-0cc87b8e3527.png" alt="Venus flytrap plant" className="w-full h-full object-cover rounded-full" />
+      </div>
+      
+      {/* Between title and phones */}
+      <div className="absolute top-1/3 left-1/2 transform -translate-x-1/2 w-14 h-14 rounded-full border-4 border-white shadow-lg overflow-hidden bg-white hover-scale">
+        <img src="/lovable-uploads/7101ed73-d130-4cbc-9a77-49f6b2255c63.png" alt="Pink tropical flowers" className="w-full h-full object-cover rounded-full" />
+      </div>
+      
+      {/* Under downloads section */}
+      <div className="absolute top-[70%] left-[35%] w-14 h-14 rounded-full border-4 border-white shadow-lg overflow-hidden bg-white hover-scale">
+        <img src="/lovable-uploads/abb5555f-2248-4c8e-acbe-d68281c1b159.png" alt="Purple water lilies" className="w-full h-full object-cover rounded-full" />
+      </div>
+      
+      {/* Next to phone gallery area - far right */}
+      <div className="absolute top-[45%] right-2 w-12 h-12 rounded-full border-4 border-white shadow-lg overflow-hidden bg-white hover-scale">
+        <img src="/lovable-uploads/b8d0116b-bd26-4705-b97e-0214dd5d0914.png" alt="Colorful caladium leaf" className="w-full h-full object-cover rounded-full" />
+      </div>
+      
+      {/* Bottom corner decorative - moved away from buttons */}
+      <div className="absolute bottom-4 right-1/3 w-14 h-14 rounded-full border-4 border-white shadow-lg overflow-hidden bg-white hover-scale">
+        <img src="/lovable-uploads/633c4de1-8c64-453f-ba9a-a71f4651e293.png" alt="Plumeria flowers" className="w-full h-full object-cover rounded-full" />
       </div>
 
       <div className="container-width py-16">
@@ -128,52 +171,48 @@ const Hero = () => {
             {/* Main Phone - Camera View */}
             <div className="relative z-10">
               <div className="w-80 h-[600px] bg-gradient-to-b from-emerald-200 to-emerald-100 rounded-[3rem] p-2 shadow-2xl hover-scale">
-                <div className="w-full h-full bg-white rounded-[2.5rem] overflow-hidden relative">
-                  {/* Scrolling Plant Gallery */}
+                <div className="w-full h-full bg-black rounded-[2.5rem] overflow-hidden relative">
+                  {/* Camera Interface */}
                   <div className="absolute inset-0">
-                    {/* Background for smooth transitions */}
-                    <div className="absolute inset-0 bg-gradient-to-b from-emerald-50 to-teal-50"></div>
+                    <img src={roseCameraView} alt="Rose in camera viewfinder" className="w-full h-full object-cover" />
                     
-                    {/* Current plant image with smooth transition */}
-                    <div className="absolute inset-4 rounded-xl overflow-hidden">
-                      <img 
-                        src={plants[currentPlantIndex].image} 
-                        alt={plants[currentPlantIndex].name}
-                        className="w-full h-full object-cover transition-all duration-1000 ease-in-out"
-                        key={currentPlantIndex}
-                      />
+                    {/* Camera UI Overlay */}
+                    <div className="absolute inset-0 flex flex-col justify-between p-6">
+                      {/* Top UI - removed Unlimited IDs */}
+                      <div className="flex items-center justify-between text-white">
+                        <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
+                        <div className="text-sm font-medium bg-black/50 px-3 py-1 rounded-full">Camera View</div>
+                        <div className="w-6 h-6"></div>
+                      </div>
                       
-                      {/* Overlay gradient for text readability */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
-                      
-                      {/* Plant name overlay */}
-                      <div className="absolute bottom-6 left-6 right-6">
-                        <div className="bg-white/90 backdrop-blur-sm rounded-xl p-4 shadow-lg">
-                          <h3 className="text-lg font-semibold text-gray-800 text-center">
-                            {plants[currentPlantIndex].name}
-                          </h3>
-                          <div className="flex justify-center mt-2">
-                            {plants.map((_, index) => (
-                              <div
-                                key={index}
-                                className={`w-2 h-2 mx-1 rounded-full transition-all duration-300 ${
-                                  index === currentPlantIndex 
-                                    ? 'bg-emerald-500 w-6' 
-                                    : 'bg-gray-300'
-                                }`}
-                              />
-                            ))}
-                          </div>
+                      {/* Center Focus Square */}
+                      <div className="flex justify-center items-center">
+                        <div className="w-32 h-32 border-2 border-white/80 rounded-lg relative">
+                          <div className="absolute -top-1 -left-1 w-4 h-4 border-l-2 border-t-2 border-white"></div>
+                          <div className="absolute -top-1 -right-1 w-4 h-4 border-r-2 border-t-2 border-white"></div>
+                          <div className="absolute -bottom-1 -left-1 w-4 h-4 border-l-2 border-b-2 border-white"></div>
+                          <div className="absolute -bottom-1 -right-1 w-4 h-4 border-r-2 border-b-2 border-white"></div>
                         </div>
                       </div>
-                    </div>
-                    
-                    {/* Top UI indicator */}
-                    <div className="absolute top-4 left-4 right-4 flex justify-between items-center">
-                      <div className="bg-emerald-500/90 text-white px-3 py-1 rounded-full text-sm font-medium">
-                        Plant Gallery
+                      
+                      {/* Bottom UI */}
+                      <div className="flex justify-between items-center">
+                        <div className="text-center">
+                          <div className="w-8 h-8 bg-white/20 rounded-full mb-1 mx-auto flex items-center justify-center">
+                            <Image className="w-4 h-4 text-white" />
+                          </div>
+                          <span className="text-xs text-white">Gallery</span>
+                        </div>
+                        <div className="w-16 h-16 bg-white rounded-full border-4 border-white/50 flex items-center justify-center">
+                          <Camera className="w-8 h-8 text-gray-600" />
+                        </div>
+                        <div className="text-center">
+                          <div className="w-8 h-8 bg-white/20 rounded-full mb-1 mx-auto flex items-center justify-center">
+                            <span className="text-white text-xs">↻</span>
+                          </div>
+                          <span className="text-xs text-white">Flip</span>
+                        </div>
                       </div>
-                      <div className="w-3 h-3 bg-emerald-500 rounded-full animate-pulse"></div>
                     </div>
                   </div>
                 </div>

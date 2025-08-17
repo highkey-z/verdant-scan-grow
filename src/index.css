@@ -144,23 +144,10 @@ All colors MUST be HSL.
   body {
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
-    opacity: 0;
-    animation: pageLoad 1s ease-out forwards;
   }
 
   html {
     scroll-behavior: smooth;
-  }
-
-  @keyframes pageLoad {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
   }
 }
 

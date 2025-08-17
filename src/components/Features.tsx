@@ -1,9 +1,11 @@
 import { Brain, BookOpen, Clock, Users } from "lucide-react";
 import aiPlantIcon from "@/assets/ai-plant-icon.png";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useScrollTransition } from "@/hooks/useScrollTransition";
 
 const Features = () => {
   const { t } = useLanguage();
+  const sectionRef = useScrollTransition();
   
   const features = [
     {
@@ -29,7 +31,11 @@ const Features = () => {
   ];
 
   return (
-    <section className="section-padding bg-gradient-to-br from-success/5 via-background to-primary/5 relative overflow-hidden">
+    <section 
+      ref={sectionRef}
+      id="powerful-features" 
+      className="section-padding section-transition bg-gradient-to-br from-success/5 via-background to-primary/5 relative overflow-hidden"
+    >
       {/* Background Design Elements */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Clean SVG Plant Icons */}

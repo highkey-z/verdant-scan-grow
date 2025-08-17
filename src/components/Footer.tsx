@@ -44,9 +44,11 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="lg:col-span-2 space-y-4">
             <Link to="/" className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-success flex items-center justify-center">
-                <Leaf className="w-5 h-5 text-primary-foreground" />
-              </div>
+              <img 
+                src="/lovable-uploads/abb5555f-2248-4c8e-acbe-d68281c1b159.png" 
+                alt="UseVerdant Logo" 
+                className="w-8 h-8 rounded-lg object-contain"
+              />
               <span className="text-xl font-bold text-gradient">UseVerdant</span>
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed max-w-xs">
@@ -61,7 +63,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4" />
-                <span>+1 (555) 123-4567</span>
+                <span>516-737-5795</span>
               </div>
               <div className="flex items-center gap-2">
                 <MapPin className="w-4 h-4" />
@@ -142,35 +144,11 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Newsletter Signup */}
-        <div className="nature-card p-6 mb-12">
-          <div className="text-center space-y-4">
-            <h3 className="text-lg font-semibold">{t('Stay Updated')}</h3>
-            <p className="text-sm text-muted-foreground max-w-md mx-auto">
-              {t('Get notified about new features, plant care tips, and app updates')}
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder={t('Enter your email')}
-                className="flex-1 px-4 py-2 rounded-lg border border-input bg-background text-sm focus:outline-none focus:ring-2 focus:ring-ring"
-              />
-              <button className="hero-button px-6 py-2 rounded-lg text-sm font-medium whitespace-nowrap">
-                {t('Subscribe')}
-              </button>
-            </div>
-          </div>
-        </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-border/50 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
+        <div className="pt-8 border-t border-border/50 text-center text-sm text-muted-foreground">
           <div>
-            © 2024 UseVerdant. All rights reserved.
-          </div>
-          <div className="flex items-center gap-4">
-            <span>{t('Made with')}</span>
-            <Leaf className="w-4 h-4 text-success" />
-            <span>{t('for plant lovers everywhere')}</span>
+            © 2025 UseVerdant. All rights reserved.
           </div>
         </div>
       </div>

@@ -1,9 +1,11 @@
 import { Camera, Scan, Sparkles } from "lucide-react";
 import scanIllustration from "@/assets/scan-illustration.png";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useScrollTransition } from "@/hooks/useScrollTransition";
 
 const HowItWorks = () => {
   const { t } = useLanguage();
+  const sectionRef = useScrollTransition();
   
   const steps = [
     {
@@ -24,7 +26,11 @@ const HowItWorks = () => {
   ];
 
   return (
-    <section className="section-padding bg-gradient-to-b from-nature-mint/5 to-background relative overflow-hidden">
+    <section 
+      ref={sectionRef}
+      id="how-it-works" 
+      className="section-padding section-transition bg-gradient-to-b from-nature-mint/5 to-background relative overflow-hidden"
+    >
       {/* Background Design Elements */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Plant SVG Icons */}

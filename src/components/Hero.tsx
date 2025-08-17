@@ -18,7 +18,7 @@ const Hero = () => {
       </div>
       
       {/* Between title and phones */}
-      <div className="absolute top-1/3 left-1/2 transform -translate-x-1/2 w-18 h-18 rounded-full border-4 border-white shadow-lg overflow-hidden bg-white hover-scale">
+      <div className="absolute top-1/3 left-1/2 transform -translate-x-1/2 w-14 h-14 rounded-full border-4 border-white shadow-lg overflow-hidden bg-white hover-scale">
         <img src="/lovable-uploads/7101ed73-d130-4cbc-9a77-49f6b2255c63.png" alt="Pink tropical flowers" className="w-full h-full object-cover rounded-full" />
       </div>
       

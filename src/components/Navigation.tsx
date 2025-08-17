@@ -1,8 +1,27 @@
 import { Button } from "@/components/ui/button";
-import { Search, Globe } from "lucide-react";
-// Import the user's logo image from the upload
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import { Search, Globe, ChevronDown } from "lucide-react";
+import { useLanguage, languages } from "@/contexts/LanguageContext";
+import { useLocation } from "react-router-dom";
 
 const Navigation = () => {
+  const { currentLanguage, setLanguage, t } = useLanguage();
+  const location = useLocation();
+  
+  const handleNavigation = (href: string) => {
+    if (location.pathname === '/faq') {
+      // If we're on FAQ page, navigate to home first then scroll
+      window.location.href = `/${href}`;
+    } else {
+      // If we're on home page, just scroll
+      if (href.startsWith('#')) {
+        document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        window.location.href = href;
+      }
+    }
+  };
+
   return (
     <nav className="w-full bg-white/98 backdrop-blur-sm border-b border-white/20 sticky top-0 z-50">
       <div className="container-width py-4">
@@ -10,27 +29,57 @@ const Navigation = () => {
           {/* Logo */}
           <div className="flex items-center gap-3">
             <img src="/lovable-uploads/8652cabd-a4d5-4343-ad90-300bbc7fbd50.png" alt="UseVerdant Plant Logo" className="w-10 h-10" />
-            <span className="text-xl font-bold text-primary">UseVerdant</span>
+            <a href="/" className="text-xl font-bold text-primary hover:text-primary/80 transition-colors">
+              UseVerdant
+            </a>
           </div>
 
           {/* Navigation Links */}
           <div className="hidden md:flex items-center gap-8">
-            <a href="#" className="text-foreground/70 hover:text-primary transition-colors">
-              Home
-            </a>
-            <a href="#perfect-for-everyone" className="text-foreground/70 hover:text-primary transition-colors">
-              Application
-            </a>
-            <a href="#ready-to-start" className="text-foreground/70 hover:text-primary transition-colors">
-              Download
-            </a>
+            <button 
+              onClick={() => handleNavigation('/')}
+              className="text-foreground/70 hover:text-primary transition-colors"
+            >
+              {t('Home')}
+            </button>
+            <button 
+              onClick={() => handleNavigation('#perfect-for-everyone')}
+              className="text-foreground/70 hover:text-primary transition-colors"
+            >
+              {t('Application')}
+            </button>
+            <button 
+              onClick={() => handleNavigation('#ready-to-start')}
+              className="text-foreground/70 hover:text-primary transition-colors"
+            >
+              {t('Download')}
+            </button>
             <a href="/faq" className="text-foreground/70 hover:text-primary transition-colors">
-              FAQ
+              {t('FAQ')}
             </a>
-            <div className="flex items-center gap-2 text-foreground/70 hover:text-primary transition-colors cursor-pointer">
-              <Globe className="w-4 h-4" />
-              <span>English</span>
-            </div>
+            
+            {/* Language Dropdown */}
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <button className="flex items-center gap-2 text-foreground/70 hover:text-primary transition-colors">
+                  <Globe className="w-4 h-4" />
+                  <span>{currentLanguage.flag} {currentLanguage.name}</span>
+                  <ChevronDown className="w-3 h-3" />
+                </button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end" className="w-48 bg-white/95 backdrop-blur-sm border border-white/20">
+                {languages.map((language) => (
+                  <DropdownMenuItem
+                    key={language.code}
+                    onClick={() => setLanguage(language)}
+                    className="flex items-center gap-3 cursor-pointer hover:bg-primary/10"
+                  >
+                    <span className="text-lg">{language.flag}</span>
+                    <span>{language.name}</span>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
           </div>
 
           {/* Search Icon */}

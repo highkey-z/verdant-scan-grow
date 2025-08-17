@@ -6,10 +6,34 @@ import roseCameraView from "@/assets/rose-camera-view.jpg";
 const Hero = () => {
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-emerald-50 via-background to-teal-50 min-h-[90vh]">
-      {/* Floating background elements */}
+      {/* Enhanced Background Design */}
       <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/5 via-transparent to-teal-500/5"></div>
-      <div className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-br from-emerald-200/20 to-teal-200/20 rounded-full blur-xl"></div>
-      <div className="absolute bottom-40 right-20 w-40 h-40 bg-gradient-to-br from-rose-200/20 to-pink-200/20 rounded-full blur-xl"></div>
+      
+      {/* Geometric Background Patterns */}
+      <div className="absolute inset-0">
+        {/* Large geometric shapes */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-emerald-100/30 to-transparent rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-tr from-teal-100/30 to-transparent rounded-full blur-3xl"></div>
+        
+        {/* Floating geometric elements */}
+        <div className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-br from-emerald-200/20 to-teal-200/20 rounded-full blur-xl"></div>
+        <div className="absolute bottom-40 right-20 w-40 h-40 bg-gradient-to-br from-rose-200/20 to-pink-200/20 rounded-full blur-xl"></div>
+        
+        {/* Additional design elements */}
+        <div className="absolute top-1/2 left-0 w-64 h-1 bg-gradient-to-r from-transparent via-emerald-200/40 to-transparent"></div>
+        <div className="absolute top-1/3 right-0 w-48 h-1 bg-gradient-to-l from-transparent via-teal-200/40 to-transparent"></div>
+        
+        {/* Subtle dots pattern */}
+        <div className="absolute top-32 right-32 grid grid-cols-3 gap-4 opacity-20">
+          {[...Array(9)].map((_, i) => (
+            <div key={i} className="w-2 h-2 bg-emerald-400 rounded-full"></div>
+          ))}
+        </div>
+        
+        {/* Diagonal accent lines */}
+        <div className="absolute top-64 left-64 w-24 h-0.5 bg-gradient-to-r from-emerald-300/50 to-transparent rotate-45"></div>
+        <div className="absolute bottom-64 right-64 w-32 h-0.5 bg-gradient-to-l from-teal-300/50 to-transparent -rotate-45"></div>
+      </div>
       {/* Plant Bubbles - Positioned in safe areas with white borders */}
       
       {/* Above UseVerdant title */}

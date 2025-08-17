@@ -4,12 +4,12 @@ import { Search, Globe } from "lucide-react";
 
 const Navigation = () => {
   return (
-    <nav className="w-full bg-white/95 backdrop-blur-sm border-b border-border/50 sticky top-0 z-50">
+    <nav className="w-full bg-white/98 backdrop-blur-sm border-b border-white/20 sticky top-0 z-50">
       <div className="container-width py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center gap-3">
-            <img src="/lovable-uploads/479e70a8-1ab2-401a-8ac3-e8bbaa9bf470.png" alt="UseVerdant Plant Logo" className="w-8 h-8" />
+            <img src="/lovable-uploads/8652cabd-a4d5-4343-ad90-300bbc7fbd50.png" alt="UseVerdant Plant Logo" className="w-8 h-8" />
             <span className="text-xl font-bold text-primary">UseVerdant</span>
           </div>
 

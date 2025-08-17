@@ -44,23 +44,29 @@ const Navigation = () => {
           <div className="hidden md:flex items-center gap-8">
             <button 
               onClick={() => handleNavigation('/')}
-              className="text-foreground/70 hover:text-primary transition-colors"
+              className="text-foreground/70 hover:text-primary nav-button"
             >
               {t('Home')}
             </button>
             <button 
-              onClick={() => handleNavigation('#perfect-for-everyone')}
-              className="text-foreground/70 hover:text-primary transition-colors"
+              onClick={() => handleNavigation('#powerful-features')}
+              className="text-foreground/70 hover:text-primary nav-button"
             >
-              {t('Application')}
+              {t('Features')}
+            </button>
+            <button 
+              onClick={() => handleNavigation('#perfect-for-everyone')}
+              className="text-foreground/70 hover:text-primary nav-button"
+            >
+              {t('Potential Uses')}
             </button>
             <button 
               onClick={() => handleNavigation('#ready-to-start')}
-              className="text-foreground/70 hover:text-primary transition-colors"
+              className="text-foreground/70 hover:text-primary nav-button"
             >
               {t('Download')}
             </button>
-            <a href="/faq" className="text-foreground/70 hover:text-primary transition-colors">
+            <a href="/faq" className="text-foreground/70 hover:text-primary nav-button">
               {t('FAQ')}
             </a>
             
@@ -89,7 +95,7 @@ const Navigation = () => {
           </div>
 
           {/* Search Icon */}
-          <Button variant="ghost" size="icon" className="text-foreground/70 hover:text-primary">
+          <Button variant="ghost" size="icon" className="text-foreground/70 hover:text-primary button-hover">
             <Search className="w-5 h-5" />
           </Button>
         </div>

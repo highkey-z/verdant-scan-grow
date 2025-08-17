@@ -45,9 +45,9 @@ const Footer = () => {
           <div className="lg:col-span-2 space-y-4">
             <Link to="/" className="flex items-center gap-2">
               <img 
-                src="/lovable-uploads/abb5555f-2248-4c8e-acbe-d68281c1b159.png" 
+                src="/lovable-uploads/8652cabd-a4d5-4343-ad90-300bbc7fbd50.png" 
                 alt="UseVerdant Logo" 
-                className="w-8 h-8 rounded-lg object-contain"
+                className="w-8 h-8 object-contain"
               />
               <span className="text-xl font-bold text-gradient">UseVerdant</span>
             </Link>
@@ -80,7 +80,7 @@ const Footer = () => {
                 <li key={index}>
                   <Link
                     to={link.href}
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                    className="text-sm text-muted-foreground hover:text-primary transition-colors button-hover inline-block"
                   >
                     {link.label}
                   </Link>
@@ -96,7 +96,7 @@ const Footer = () => {
                 <li key={index}>
                   <Link
                     to={link.href}
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                    className="text-sm text-muted-foreground hover:text-primary transition-colors button-hover inline-block"
                   >
                     {link.label}
                   </Link>
@@ -112,7 +112,7 @@ const Footer = () => {
                 <li key={index}>
                   <Link
                     to={link.href}
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                    className="text-sm text-muted-foreground hover:text-primary transition-colors button-hover inline-block"
                   >
                     {link.label}
                   </Link>
@@ -132,7 +132,7 @@ const Footer = () => {
                       href={link.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
+                      className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors button-hover"
                     >
                       <IconComponent className="w-4 h-4" />
                       {link.label}

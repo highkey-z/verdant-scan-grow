@@ -165,17 +165,24 @@ All colors MUST be HSL.
   }
 
   .section-transition {
-    @apply relative overflow-hidden;
+    @apply relative overflow-hidden opacity-0 translate-y-20 transition-all duration-1000 ease-out;
   }
 
-  .section-transition::before {
+  .section-transition.animate-in {
+    @apply opacity-100 translate-y-0;
+  }
+
+  .section-transition::after {
     content: '';
-    @apply absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-transparent 
-           opacity-0 transition-opacity duration-1000;
+    @apply absolute -bottom-1 left-0 right-0 h-32 bg-gradient-to-t from-background via-background/80 to-transparent z-10;
   }
 
-  .section-transition.animate-in::before {
-    @apply opacity-100;
+  .button-hover {
+    @apply transition-all duration-300 ease-out transform hover:scale-105 hover:shadow-lg;
+  }
+
+  .nav-button {
+    @apply relative transition-colors duration-300 after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-0 after:left-1/2 after:bg-primary after:transition-all after:duration-300 hover:after:w-full hover:after:left-0;
   }
 
   .nature-card {

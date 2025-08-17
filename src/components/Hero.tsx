@@ -6,21 +6,31 @@ import roseCameraView from "@/assets/rose-camera-view.jpg";
 const Hero = () => {
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-nature-mint/20 via-background to-success/10 min-h-[90vh]">
-      {/* Plant Bubbles - Using user's uploaded images, positioned in blank areas only */}
-      <div className="absolute top-16 left-4 w-16 h-16 rounded-full border-3 border-white shadow-lg overflow-hidden">
-        <img src="/lovable-uploads/8a403ba0-c447-4350-8503-0cc87b8e3527.png" alt="Venus flytrap plant" className="w-full h-full object-cover" />
+      {/* Plant Bubbles - Positioned in safe areas with white borders */}
+      
+      {/* Above UseVerdant title */}
+      <div className="absolute top-8 left-1/4 w-14 h-14 rounded-full border-4 border-white shadow-lg overflow-hidden bg-white">
+        <img src="/lovable-uploads/8a403ba0-c447-4350-8503-0cc87b8e3527.png" alt="Venus flytrap plant" className="w-full h-full object-cover rounded-full" />
       </div>
-      <div className="absolute top-[25%] right-8 w-20 h-20 rounded-full border-3 border-white shadow-lg overflow-hidden">
-        <img src="/lovable-uploads/7101ed73-d130-4cbc-9a77-49f6b2255c63.png" alt="Pink tropical flowers" className="w-full h-full object-cover" />
+      
+      {/* Between title and phones */}
+      <div className="absolute top-1/3 left-1/2 transform -translate-x-1/2 w-16 h-16 rounded-full border-4 border-white shadow-lg overflow-hidden bg-white">
+        <img src="/lovable-uploads/7101ed73-d130-4cbc-9a77-49f6b2255c63.png" alt="Pink tropical flowers" className="w-full h-full object-cover rounded-full" />
       </div>
-      <div className="absolute bottom-20 left-6 w-18 h-18 rounded-full border-3 border-white shadow-lg overflow-hidden">
-        <img src="/lovable-uploads/abb5555f-2248-4c8e-acbe-d68281c1b159.png" alt="Purple water lilies" className="w-full h-full object-cover" />
+      
+      {/* Under downloads section */}
+      <div className="absolute top-[70%] left-[35%] w-12 h-12 rounded-full border-4 border-white shadow-lg overflow-hidden bg-white">
+        <img src="/lovable-uploads/abb5555f-2248-4c8e-acbe-d68281c1b159.png" alt="Purple water lilies" className="w-full h-full object-cover rounded-full" />
       </div>
-      <div className="absolute top-[75%] right-12 w-14 h-14 rounded-full border-3 border-white shadow-lg overflow-hidden">
-        <img src="/lovable-uploads/b8d0116b-bd26-4705-b97e-0214dd5d0914.png" alt="Colorful caladium leaf" className="w-full h-full object-cover" />
+      
+      {/* Next to phone gallery area - far right */}
+      <div className="absolute top-[45%] right-2 w-10 h-10 rounded-full border-4 border-white shadow-lg overflow-hidden bg-white">
+        <img src="/lovable-uploads/b8d0116b-bd26-4705-b97e-0214dd5d0914.png" alt="Colorful caladium leaf" className="w-full h-full object-cover rounded-full" />
       </div>
-      <div className="absolute bottom-40 right-4 w-16 h-16 rounded-full border-3 border-white shadow-lg overflow-hidden">
-        <img src="/lovable-uploads/633c4de1-8c64-453f-ba9a-a71f4651e293.png" alt="Plumeria flowers" className="w-full h-full object-cover" />
+      
+      {/* Bottom corner decorative */}
+      <div className="absolute bottom-4 left-4 w-12 h-12 rounded-full border-4 border-white shadow-lg overflow-hidden bg-white">
+        <img src="/lovable-uploads/633c4de1-8c64-453f-ba9a-a71f4651e293.png" alt="Plumeria flowers" className="w-full h-full object-cover rounded-full" />
       </div>
 
       <div className="container-width py-16">

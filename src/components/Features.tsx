@@ -1,27 +1,30 @@
 import { Brain, BookOpen, Clock, Users } from "lucide-react";
 import aiPlantIcon from "@/assets/ai-plant-icon.png";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Features = () => {
+  const { t } = useLanguage();
+  
   const features = [
     {
       icon: Brain,
-      title: "AI Plant Recognition",
-      description: "Advanced machine learning algorithms identify plants with 95% accuracy from a single photo"
+      title: t("AI Plant Recognition"),
+      description: t("Advanced machine learning algorithms identify plants with 95% accuracy from a single photo")
     },
     {
       icon: BookOpen,
-      title: "Care Tips & Advice",
-      description: "Get personalized growing tips, watering schedules, and expert gardening advice for each plant"
+      title: t("Care Tips & Advice"),
+      description: t("Get personalized growing tips, watering schedules, and expert gardening advice for each plant")
     },
     {
       icon: Clock,
-      title: "Scan History",
-      description: "Keep track of all your plant discoveries with a comprehensive history of your scans"
+      title: t("Scan History"),
+      description: t("Keep track of all your plant discoveries with a comprehensive history of your scans")
     },
     {
       icon: Users,
-      title: "Community Sharing",
-      description: "Share your plant discoveries with fellow nature enthusiasts and build your botanical knowledge"
+      title: t("Community Sharing"),
+      description: t("Share your plant discoveries with fellow nature enthusiasts and build your botanical knowledge")
     }
   ];
 
@@ -131,10 +134,10 @@ const Features = () => {
       <div className="container-width relative z-10">
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold">
-            Powerful <span className="text-gradient">Features</span>
+            {t('Powerful Features').split(' ').slice(0, 1).join(' ')} <span className="text-gradient">{t('Powerful Features').split(' ').slice(1).join(' ')}</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Everything you need to become a plant identification expert
+            {t('Everything you need to become a plant identification expert')}
           </p>
         </div>
 

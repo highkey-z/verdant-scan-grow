@@ -1,38 +1,41 @@
 import { Mountain, Leaf, GraduationCap } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Benefits = () => {
+  const { t } = useLanguage();
+  
   const benefits = [
     {
       icon: Mountain,
-      title: "For Nature Lovers",
-      description: "Transform your hikes and outdoor adventures into learning experiences",
+      title: t("For Nature Lovers"),
+      description: t("Transform your hikes and outdoor adventures into learning experiences"),
       details: [
-        "Identify wildflowers and trees on trails",
-        "Learn about local ecosystems",
-        "Discover new species in your area",
-        "Build your nature knowledge"
+        t("Identify wildflowers and trees on trails"),
+        t("Learn about local ecosystems"),
+        t("Discover new species in your area"),
+        t("Build your nature knowledge")
       ]
     },
     {
       icon: Leaf,
-      title: "For Gardeners",
-      description: "Become a more knowledgeable and successful gardener",
+      title: t("For Gardeners"),
+      description: t("Become a more knowledgeable and successful gardener"),
       details: [
-        "Identify weeds vs. beneficial plants",
-        "Spot plant diseases early",
-        "Learn optimal growing conditions",
-        "Get expert care recommendations"
+        t("Identify weeds vs. beneficial plants"),
+        t("Spot plant diseases early"),
+        t("Learn optimal growing conditions"),
+        t("Get expert care recommendations")
       ]
     },
     {
       icon: GraduationCap,
-      title: "For Students",
-      description: "Perfect study companion for botany and biology courses",
+      title: t("For Students"),
+      description: t("Perfect study companion for botany and biology courses"),
       details: [
-        "Study plant families and characteristics",
-        "Complete field work assignments",
-        "Build botanical vocabulary",
-        "Access detailed plant information"
+        t("Study plant families and characteristics"),
+        t("Complete field work assignments"),
+        t("Build botanical vocabulary"),
+        t("Access detailed plant information")
       ]
     }
   ];
@@ -144,10 +147,10 @@ const Benefits = () => {
       <div className="container-width relative z-10">
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold">
-            Perfect <span className="text-gradient">For Everyone</span>
+            {t('Perfect For Everyone').split(' ').slice(0, 1).join(' ')} <span className="text-gradient">{t('Perfect For Everyone').split(' ').slice(1).join(' ')}</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Whether you're exploring nature, tending your garden, or studying botany
+            {t('Whether you\'re exploring nature, tending your garden, or studying botany')}
           </p>
         </div>
 
@@ -185,17 +188,17 @@ const Benefits = () => {
         <div id="ready-to-start" className="mt-16 text-center">
           <div className="nature-card p-8 max-w-2xl mx-auto">
             <h3 className="text-2xl font-bold mb-4">
-              Ready to Start Your <span className="text-gradient">Plant Journey?</span>
+              {t('Ready to Start Your Plant Journey?').split(' ').slice(0, 5).join(' ')} <span className="text-gradient">{t('Ready to Start Your Plant Journey?').split(' ').slice(5).join(' ')}</span>
             </h3>
             <p className="text-muted-foreground mb-6">
-              Join thousands of users who are already discovering the world of plants with UseVerdant
+              {t('Join thousands of users who are already discovering the world of plants with UseVerdant')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="hero-button px-6 py-3 rounded-lg font-medium transition-all duration-300">
-                Download for iOS
+                {t('Download for iOS')}
               </button>
               <button className="hero-button px-6 py-3 rounded-lg font-medium transition-all duration-300">
-                Download for Android
+                {t('Download for Android')}
               </button>
             </div>
           </div>

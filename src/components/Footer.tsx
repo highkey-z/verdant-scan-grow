@@ -1,6 +1,9 @@
 import { Leaf, Mail, MapPin, Phone } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Footer = () => {
+  const { t } = useLanguage();
+  
   const footerLinks = {
     company: [
       { label: "About", href: "#" },
@@ -62,7 +65,7 @@ const Footer = () => {
 
           {/* Links Sections */}
           <div className="space-y-4">
-            <h3 className="font-semibold text-foreground">Company</h3>
+            <h3 className="font-semibold text-foreground">{t('Company')}</h3>
             <ul className="space-y-2">
               {footerLinks.company.map((link, index) => (
                 <li key={index}>
@@ -78,7 +81,7 @@ const Footer = () => {
           </div>
 
           <div className="space-y-4">
-            <h3 className="font-semibold text-foreground">Support</h3>
+            <h3 className="font-semibold text-foreground">{t('Support')}</h3>
             <ul className="space-y-2">
               {footerLinks.support.map((link, index) => (
                 <li key={index}>
@@ -94,7 +97,7 @@ const Footer = () => {
           </div>
 
           <div className="space-y-4">
-            <h3 className="font-semibold text-foreground">Legal</h3>
+            <h3 className="font-semibold text-foreground">{t('Legal')}</h3>
             <ul className="space-y-2">
               {footerLinks.legal.map((link, index) => (
                 <li key={index}>
@@ -110,7 +113,7 @@ const Footer = () => {
           </div>
 
           <div className="space-y-4">
-            <h3 className="font-semibold text-foreground">Follow Us</h3>
+            <h3 className="font-semibold text-foreground">{t('Follow Us')}</h3>
             <ul className="space-y-2">
               {footerLinks.social.map((link, index) => (
                 <li key={index}>
@@ -129,18 +132,18 @@ const Footer = () => {
         {/* Newsletter Signup */}
         <div className="nature-card p-6 mb-12">
           <div className="text-center space-y-4">
-            <h3 className="text-lg font-semibold">Stay Updated</h3>
+            <h3 className="text-lg font-semibold">{t('Stay Updated')}</h3>
             <p className="text-sm text-muted-foreground max-w-md mx-auto">
-              Get notified about new features, plant care tips, and app updates
+              {t('Get notified about new features, plant care tips, and app updates')}
             </p>
             <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
               <input
                 type="email"
-                placeholder="Enter your email"
+                placeholder={t('Enter your email')}
                 className="flex-1 px-4 py-2 rounded-lg border border-input bg-background text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               />
               <button className="hero-button px-6 py-2 rounded-lg text-sm font-medium whitespace-nowrap">
-                Subscribe
+                {t('Subscribe')}
               </button>
             </div>
           </div>
@@ -152,9 +155,9 @@ const Footer = () => {
             © 2024 UseVerdant. All rights reserved.
           </div>
           <div className="flex items-center gap-4">
-            <span>Made with</span>
+            <span>{t('Made with')}</span>
             <Leaf className="w-4 h-4 text-success" />
-            <span>for plant lovers everywhere</span>
+            <span>{t('for plant lovers everywhere')}</span>
           </div>
         </div>
       </div>

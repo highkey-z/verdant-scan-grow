@@ -2,8 +2,11 @@ import { Button } from "@/components/ui/button";
 import { Download, Play, Star, Camera, Leaf, Flower, TreePine, Sprout, Cherry, Shield, Heart, Droplets, Sun, Users, Recycle, Image } from "lucide-react";
 import qrCode from "@/assets/qr-code.png";
 import roseCameraView from "@/assets/rose-camera-view.jpg";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Hero = () => {
+  const { t } = useLanguage();
+  
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-emerald-50 via-white to-teal-50 min-h-[90vh]">
       {/* Enhanced Background Design */}
@@ -121,14 +124,15 @@ const Hero = () => {
                 <span className="bg-gradient-to-r from-emerald-600 via-teal-600 to-emerald-700 bg-clip-text text-transparent">UseVerdant</span>
               </h1>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground/90">
-                AI Botanist In<br />Your Pocket
+                {t('AI Botanist In Your Pocket').split(' ').slice(0, 3).join(' ')}<br />
+                {t('AI Botanist In Your Pocket').split(' ').slice(3).join(' ')}
               </h2>
             </div>
 
             {/* Enhanced Description */}
             <div className="space-y-4 animate-fade-in">
               <p className="text-lg text-muted-foreground max-w-md">
-                Instantly identify any plant with AI-powered camera recognition. Get detailed care guides, toxicity warnings, and build your personal garden collection.
+                {t('Instantly identify any plant with AI-powered camera recognition. Get detailed care guides, toxicity warnings, and build your personal garden collection.')}
               </p>
             </div>
 
@@ -141,8 +145,8 @@ const Hero = () => {
                   </svg>
                 </div>
                 <div className="text-left">
-                  <div className="text-xs opacity-80">Download on the</div>
-                  <div className="font-semibold">App Store</div>
+                  <div className="text-xs opacity-80">{t('Download on the')}</div>
+                  <div className="font-semibold">{t('App Store')}</div>
                 </div>
               </Button>
               <Button size="lg" className="bg-black text-white hover:bg-black/90 flex items-center gap-3 px-6 rounded-xl w-64">
@@ -153,8 +157,8 @@ const Hero = () => {
                   <path d="M13.792 12L16.5 7.5l4.146-2.341a1 1 0 01.354.734v9.107a1 1 0 01-.354.734L16.5 16.5 13.792 12z" fill="#4285F4"/>
                 </svg>
                 <div className="text-left">
-                  <div className="text-xs opacity-80">GET IT ON</div>
-                  <div className="font-semibold">Google Play</div>
+                  <div className="text-xs opacity-80">{t('GET IT ON')}</div>
+                  <div className="font-semibold">{t('Google Play')}</div>
                 </div>
               </Button>
             </div>

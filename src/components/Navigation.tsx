@@ -11,11 +11,17 @@ const Navigation = () => {
   const handleNavigation = (href: string) => {
     if (location.pathname === '/faq') {
       // If we're on FAQ page, navigate to home first then scroll
-      window.location.href = `/${href}`;
+      if (href === '/') {
+        window.location.href = '/';
+      } else {
+        window.location.href = `/${href}`;
+      }
     } else {
       // If we're on home page, just scroll
       if (href.startsWith('#')) {
         document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
+      } else if (href === '/') {
+        window.location.href = '/';
       } else {
         window.location.href = href;
       }

@@ -1,22 +1,25 @@
 import { Camera, Scan, Sparkles } from "lucide-react";
 import scanIllustration from "@/assets/scan-illustration.png";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const HowItWorks = () => {
+  const { t } = useLanguage();
+  
   const steps = [
     {
       icon: Camera,
-      title: "Open the App",
-      description: "Launch UseVerdant and point your camera at any plant"
+      title: t("Open the App"),
+      description: t("Launch UseVerdant and point your camera at any plant")
     },
     {
       icon: Scan,
-      title: "Scan & Capture",
-      description: "Take a photo of the plant you want to identify"
+      title: t("Scan & Capture"),
+      description: t("Take a photo of the plant you want to identify")
     },
     {
       icon: Sparkles,
-      title: "Get Instant Results",
-      description: "Receive detailed plant information and care tips immediately"
+      title: t("Get Instant Results"),
+      description: t("Receive detailed plant information and care tips immediately")
     }
   ];
 
@@ -124,10 +127,10 @@ const HowItWorks = () => {
       <div className="container-width relative z-10">
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold">
-            How It <span className="text-gradient">Works</span>
+            {t('How It Works').split(' ').slice(0, 2).join(' ')} <span className="text-gradient">{t('How It Works').split(' ').slice(2).join(' ')}</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Plant identification made simple in just three easy steps
+            {t('Plant identification made simple in just three easy steps')}
           </p>
         </div>
 

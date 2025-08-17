@@ -44,30 +44,30 @@ const Navigation = () => {
           <div className="hidden md:flex items-center gap-8">
             <button 
               onClick={() => handleNavigation('/')}
-              className="text-foreground/70 hover:text-primary nav-button"
+              className="nav-button"
             >
-              {t('Home')}
+              <span>{t('Home')}</span>
             </button>
             <button 
               onClick={() => handleNavigation('#powerful-features')}
-              className="text-foreground/70 hover:text-primary nav-button"
+              className="nav-button"
             >
-              {t('Features')}
+              <span>{t('Features')}</span>
             </button>
             <button 
               onClick={() => handleNavigation('#perfect-for-everyone')}
-              className="text-foreground/70 hover:text-primary nav-button"
+              className="nav-button"
             >
-              {t('Potential Uses')}
+              <span>{t('Potential Uses')}</span>
             </button>
             <button 
               onClick={() => handleNavigation('#ready-to-start')}
-              className="text-foreground/70 hover:text-primary nav-button"
+              className="nav-button"
             >
-              {t('Download')}
+              <span>{t('Download')}</span>
             </button>
-            <a href="/faq" className="text-foreground/70 hover:text-primary nav-button">
-              {t('FAQ')}
+            <a href="/faq" className="nav-button">
+              <span>{t('FAQ')}</span>
             </a>
             
             {/* Language Dropdown */}

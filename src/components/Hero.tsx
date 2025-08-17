@@ -2,34 +2,25 @@ import { Button } from "@/components/ui/button";
 import { Download, Play, Star, Camera, Leaf, Flower, TreePine, Sprout, Cherry, Shield, Heart, Droplets, Sun, Users, Recycle, Image } from "lucide-react";
 import qrCode from "@/assets/qr-code.png";
 import roseCameraView from "@/assets/rose-camera-view.jpg";
-import bubblePlant1 from "@/assets/bubble-plant-1.png";
-import bubblePlant2 from "@/assets/bubble-plant-2.png";
-import bubblePlant3 from "@/assets/bubble-plant-3.png";
-import bubblePlant4 from "@/assets/bubble-plant-4.png";
-import bubblePlant5 from "@/assets/bubble-plant-5.png";
-import bubblePlant6 from "@/assets/bubble-plant-6.png";
 
 const Hero = () => {
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-nature-mint/20 via-background to-success/10 min-h-[90vh]">
-      {/* Small Plant Bubbles - Positioned only in empty spaces, far from content */}
-      <div className="absolute top-24 left-2 w-10 h-10 rounded-full border-2 border-white shadow-lg overflow-hidden">
-        <img src={bubblePlant1} alt="Succulent plant" className="w-full h-full object-cover" />
+      {/* Plant Bubbles - Using user's uploaded images, positioned in blank areas only */}
+      <div className="absolute top-16 left-4 w-16 h-16 rounded-full border-3 border-white shadow-lg overflow-hidden">
+        <img src="/lovable-uploads/8a403ba0-c447-4350-8503-0cc87b8e3527.png" alt="Venus flytrap plant" className="w-full h-full object-cover" />
       </div>
-      <div className="absolute bottom-32 right-4 w-12 h-12 rounded-full border-2 border-white shadow-lg overflow-hidden">
-        <img src={bubblePlant2} alt="Lavender flowers" className="w-full h-full object-cover" />
+      <div className="absolute top-[25%] right-8 w-20 h-20 rounded-full border-3 border-white shadow-lg overflow-hidden">
+        <img src="/lovable-uploads/7101ed73-d130-4cbc-9a77-49f6b2255c63.png" alt="Pink tropical flowers" className="w-full h-full object-cover" />
       </div>
-      <div className="absolute top-[60%] left-2 w-8 h-8 rounded-full border-2 border-white shadow-lg overflow-hidden">
-        <img src={bubblePlant3} alt="Fern fronds" className="w-full h-full object-cover" />
+      <div className="absolute bottom-20 left-6 w-18 h-18 rounded-full border-3 border-white shadow-lg overflow-hidden">
+        <img src="/lovable-uploads/abb5555f-2248-4c8e-acbe-d68281c1b159.png" alt="Purple water lilies" className="w-full h-full object-cover" />
       </div>
-      <div className="absolute bottom-80 right-2 w-9 h-9 rounded-full border-2 border-white shadow-lg overflow-hidden">
-        <img src={bubblePlant4} alt="Sunflower bloom" className="w-full h-full object-cover" />
+      <div className="absolute top-[75%] right-12 w-14 h-14 rounded-full border-3 border-white shadow-lg overflow-hidden">
+        <img src="/lovable-uploads/b8d0116b-bd26-4705-b97e-0214dd5d0914.png" alt="Colorful caladium leaf" className="w-full h-full object-cover" />
       </div>
-      <div className="absolute top-[80%] right-6 w-11 h-11 rounded-full border-2 border-white shadow-lg overflow-hidden">
-        <img src={bubblePlant5} alt="Cactus flower" className="w-full h-full object-cover" />
-      </div>
-      <div className="absolute bottom-96 left-3 w-7 h-7 rounded-full border-2 border-white shadow-lg overflow-hidden">
-        <img src={bubblePlant6} alt="Ivy leaves" className="w-full h-full object-cover" />
+      <div className="absolute bottom-40 right-4 w-16 h-16 rounded-full border-3 border-white shadow-lg overflow-hidden">
+        <img src="/lovable-uploads/633c4de1-8c64-453f-ba9a-a71f4651e293.png" alt="Plumeria flowers" className="w-full h-full object-cover" />
       </div>
 
       <div className="container-width py-16">

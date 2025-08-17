@@ -1,33 +1,38 @@
-import { Leaf, Mail, MapPin, Phone } from "lucide-react";
+import { Leaf, Mail, MapPin, Phone, Twitter, Instagram } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const { t } = useLanguage();
   
   const footerLinks = {
     company: [
-      { label: "About", href: "#" },
-      { label: "Blog", href: "#" },
-      { label: "Careers", href: "#" },
-      { label: "Press", href: "#" }
+      { label: "About", href: "/about" },
+      { label: "Careers", href: "/careers" }
     ],
     support: [
-      { label: "Help Center", href: "#" },
-      { label: "Contact Us", href: "#" },
-      { label: "Bug Report", href: "#" },
-      { label: "Feature Request", href: "#" }
+      { label: "Help Center", href: "/help-center" },
+      { label: "Contact Us", href: "/contact" },
+      { label: "Bug Report", href: "/bug-report" },
+      { label: "Feature Request", href: "/feature-request" }
     ],
     legal: [
-      { label: "Privacy Policy", href: "#" },
-      { label: "Terms of Service", href: "#" },
-      { label: "Cookie Policy", href: "#" },
-      { label: "GDPR", href: "#" }
+      { label: "Privacy Policy", href: "/privacy-policy" },
+      { label: "Terms of Service", href: "/terms-of-service" },
+      { label: "Cookie Policy", href: "/cookie-policy" },
+      { label: "GDPR", href: "/gdpr" }
     ],
     social: [
-      { label: "Twitter", href: "#" },
-      { label: "Instagram", href: "#" },
-      { label: "Facebook", href: "#" },
-      { label: "YouTube", href: "#" }
+      { 
+        label: "Twitter", 
+        href: "https://twitter.com/useverdantai",
+        icon: Twitter
+      },
+      { 
+        label: "Instagram", 
+        href: "https://instagram.com/useverdantai",
+        icon: Instagram
+      }
     ]
   };
 
@@ -38,19 +43,21 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">
           {/* Brand Section */}
           <div className="lg:col-span-2 space-y-4">
-            <div className="flex items-center gap-2">
+            <Link to="/" className="flex items-center gap-2">
               <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-success flex items-center justify-center">
                 <Leaf className="w-5 h-5 text-primary-foreground" />
               </div>
               <span className="text-xl font-bold text-gradient">UseVerdant</span>
-            </div>
+            </Link>
             <p className="text-muted-foreground text-sm leading-relaxed max-w-xs">
               Identify any plant instantly with AI-powered scanning. Perfect for nature lovers, gardeners, and students.
             </p>
             <div className="space-y-2 text-sm text-muted-foreground">
               <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4" />
-                <span>hello@useverdant.com</span>
+                <a href="mailto:useverdantai@gmail.com" className="hover:text-primary transition-colors">
+                  useverdantai@gmail.com
+                </a>
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4" />
@@ -58,7 +65,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-2">
                 <MapPin className="w-4 h-4" />
-                <span>San Francisco, CA</span>
+                <span>Farmingdale, NY</span>
               </div>
             </div>
           </div>
@@ -69,12 +76,12 @@ const Footer = () => {
             <ul className="space-y-2">
               {footerLinks.company.map((link, index) => (
                 <li key={index}>
-                  <a
-                    href={link.href}
+                  <Link
+                    to={link.href}
                     className="text-sm text-muted-foreground hover:text-primary transition-colors"
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -85,12 +92,12 @@ const Footer = () => {
             <ul className="space-y-2">
               {footerLinks.support.map((link, index) => (
                 <li key={index}>
-                  <a
-                    href={link.href}
+                  <Link
+                    to={link.href}
                     className="text-sm text-muted-foreground hover:text-primary transition-colors"
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -101,12 +108,12 @@ const Footer = () => {
             <ul className="space-y-2">
               {footerLinks.legal.map((link, index) => (
                 <li key={index}>
-                  <a
-                    href={link.href}
+                  <Link
+                    to={link.href}
                     className="text-sm text-muted-foreground hover:text-primary transition-colors"
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -115,16 +122,22 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="font-semibold text-foreground">{t('Follow Us')}</h3>
             <ul className="space-y-2">
-              {footerLinks.social.map((link, index) => (
-                <li key={index}>
-                  <a
-                    href={link.href}
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              ))}
+              {footerLinks.social.map((link, index) => {
+                const IconComponent = link.icon;
+                return (
+                  <li key={index}>
+                    <a
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      <IconComponent className="w-4 h-4" />
+                      {link.label}
+                    </a>
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </div>

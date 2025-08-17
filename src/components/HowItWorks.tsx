@@ -63,16 +63,6 @@ const HowItWorks = () => {
           ))}
         </div>
 
-        {/* Visual Illustration */}
-        <div className="mt-16 flex justify-center">
-          <div className="relative">
-            <img
-              src={scanIllustration}
-              alt="Plant scanning illustration"
-              className="w-64 h-64 object-contain floating-animation"
-            />
-          </div>
-        </div>
       </div>
     </section>
   );

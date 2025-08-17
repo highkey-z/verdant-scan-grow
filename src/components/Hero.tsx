@@ -9,12 +9,27 @@ const Hero = () => {
       {/* Enhanced Background Design */}
       <div className="absolute inset-0">
         {/* Large decorative circles */}
-        <div className="absolute -top-32 -right-32 w-96 h-96 border-4 border-emerald-200/60 rounded-full"></div>
-        <div className="absolute -bottom-32 -left-32 w-80 h-80 border-4 border-teal-200/60 rounded-full"></div>
+        <div className="absolute -top-32 -right-32 w-96 h-96 border-4 border-emerald-200/60 rounded-full animate-pulse"></div>
+        <div className="absolute -bottom-32 -left-32 w-80 h-80 border-4 border-teal-200/60 rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
         
         {/* Medium decorative elements */}
-        <div className="absolute top-1/4 right-1/4 w-48 h-48 bg-gradient-to-br from-emerald-100/80 to-emerald-200/40 rounded-3xl rotate-12 shadow-lg"></div>
-        <div className="absolute bottom-1/4 left-1/3 w-32 h-32 bg-gradient-to-tr from-teal-100/80 to-teal-200/40 rounded-2xl -rotate-12 shadow-lg"></div>
+        <div className="absolute top-1/4 right-1/4 w-48 h-48 bg-gradient-to-br from-emerald-100/80 to-emerald-200/40 rounded-3xl rotate-12 shadow-lg hover-scale"></div>
+        <div className="absolute bottom-1/4 left-1/3 w-32 h-32 bg-gradient-to-tr from-teal-100/80 to-teal-200/40 rounded-2xl -rotate-12 shadow-lg hover-scale"></div>
+        
+        {/* Additional geometric shapes */}
+        <div className="absolute top-16 right-1/2 w-24 h-24 bg-gradient-to-br from-rose-100/70 to-pink-200/40 rounded-full shadow-md"></div>
+        <div className="absolute bottom-16 left-1/2 w-36 h-36 border-3 border-emerald-300/50 rounded-lg rotate-45"></div>
+        
+        {/* Plant-themed decorative leaves */}
+        <div className="absolute top-1/3 left-12">
+          <Leaf className="w-8 h-8 text-emerald-300/60 transform rotate-12 animate-pulse" />
+        </div>
+        <div className="absolute bottom-1/3 right-12">
+          <Flower className="w-6 h-6 text-rose-300/60 transform -rotate-12 animate-pulse" style={{animationDelay: '0.5s'}} />
+        </div>
+        <div className="absolute top-2/3 left-1/4">
+          <Sprout className="w-7 h-7 text-teal-300/60 transform rotate-45 animate-pulse" style={{animationDelay: '1.5s'}} />
+        </div>
         
         {/* Geometric grid pattern */}
         <div className="absolute top-16 left-16 grid grid-cols-4 gap-8 opacity-30">
@@ -23,18 +38,28 @@ const Hero = () => {
           ))}
         </div>
         
+        {/* Additional dot patterns */}
+        <div className="absolute bottom-32 right-16 grid grid-cols-3 gap-6 opacity-40">
+          {[...Array(9)].map((_, i) => (
+            <div key={i} className="w-2 h-2 bg-teal-400 rounded-full animate-pulse" style={{animationDelay: `${i * 0.2}s`}}></div>
+          ))}
+        </div>
+        
         {/* Flowing lines */}
         <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-emerald-300/60 to-transparent"></div>
         <div className="absolute top-1/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-teal-300/40 to-transparent"></div>
+        <div className="absolute top-2/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-rose-300/30 to-transparent"></div>
         
         {/* Corner accent triangles */}
         <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-emerald-200/50 to-transparent transform rotate-45 translate-x-16 -translate-y-16"></div>
         <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-teal-200/50 to-transparent transform rotate-45 -translate-x-12 translate-y-12"></div>
         
-        {/* Floating hexagons */}
-        <div className="absolute top-32 right-1/3 w-16 h-16 border-2 border-emerald-300/70 transform rotate-30" style={{clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)'}}>
+        {/* Enhanced floating hexagons */}
+        <div className="absolute top-32 right-1/3 w-16 h-16 border-2 border-emerald-300/70 transform rotate-30 hover-scale" style={{clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)'}}>
         </div>
-        <div className="absolute bottom-32 left-1/4 w-12 h-12 border-2 border-teal-300/70 transform -rotate-30" style={{clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)'}}>
+        <div className="absolute bottom-32 left-1/4 w-12 h-12 border-2 border-teal-300/70 transform -rotate-30 hover-scale" style={{clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)'}}>
+        </div>
+        <div className="absolute top-3/4 right-1/4 w-14 h-14 border-2 border-rose-300/70 transform rotate-60 hover-scale" style={{clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)'}}>
         </div>
         
         {/* Radial burst pattern */}
@@ -44,6 +69,14 @@ const Hero = () => {
           <div className="w-1 h-16 bg-gradient-to-t from-emerald-300/60 to-transparent absolute top-0 left-0 transform rotate-90"></div>
           <div className="w-1 h-16 bg-gradient-to-t from-emerald-300/60 to-transparent absolute top-0 left-0 transform rotate-135"></div>
         </div>
+        
+        {/* Floating diamond shapes */}
+        <div className="absolute top-20 left-1/3 w-6 h-6 bg-gradient-to-br from-emerald-200/80 to-emerald-300/60 transform rotate-45 animate-pulse"></div>
+        <div className="absolute bottom-20 right-1/3 w-8 h-8 bg-gradient-to-br from-teal-200/80 to-teal-300/60 transform rotate-45 animate-pulse" style={{animationDelay: '0.7s'}}></div>
+        
+        {/* Organic flowing curves */}
+        <div className="absolute top-1/4 left-0 w-48 h-2 bg-gradient-to-r from-transparent via-emerald-200/60 to-transparent transform -rotate-12 rounded-full"></div>
+        <div className="absolute bottom-1/4 right-0 w-64 h-2 bg-gradient-to-l from-transparent via-teal-200/60 to-transparent transform rotate-12 rounded-full"></div>
       </div>
       {/* Plant Bubbles - Positioned in safe areas with white borders */}
       

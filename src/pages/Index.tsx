@@ -4,40 +4,32 @@ import HowItWorks from "@/components/HowItWorks";
 import Features from "@/components/Features";
 import Benefits from "@/components/Benefits";
 import Footer from "@/components/Footer";
-import useSectionTransition from "@/hooks/useSectionTransition";
+import useSmoothTransition from "@/hooks/useSmoothTransition";
 
 const Index = () => {
-  const heroTransition = useSectionTransition();
-  const howItWorksTransition = useSectionTransition();
-  const featuresTransition = useSectionTransition();
-  const benefitsTransition = useSectionTransition();
+  const heroRef = useSmoothTransition();
+  const howItWorksRef = useSmoothTransition();
+  const featuresRef = useSmoothTransition();
+  const benefitsRef = useSmoothTransition();
 
   return (
     <div className="min-h-screen">
       <Navigation />
       
-      <section ref={heroTransition.ref} className={heroTransition.className}>
-        <div className="section-container">
-          <Hero />
-        </div>
+      <section id="hero" ref={heroRef} className="section-wrapper">
+        <Hero />
       </section>
       
-      <section ref={howItWorksTransition.ref} className={howItWorksTransition.className}>
-        <div className="section-container">
-          <HowItWorks />
-        </div>
+      <section id="how-it-works" ref={howItWorksRef} className="section-wrapper">
+        <HowItWorks />
       </section>
       
-      <section ref={featuresTransition.ref} className={featuresTransition.className}>
-        <div className="section-container">
-          <Features />
-        </div>
+      <section id="powerful-features" ref={featuresRef} className="section-wrapper">
+        <Features />
       </section>
       
-      <section ref={benefitsTransition.ref} className={benefitsTransition.className}>
-        <div className="section-container">
-          <Benefits />
-        </div>
+      <section id="perfect-for-everyone" ref={benefitsRef} className="section-wrapper">
+        <Benefits />
       </section>
       
       <Footer />

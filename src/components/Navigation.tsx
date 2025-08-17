@@ -9,22 +9,16 @@ const Navigation = () => {
   const location = useLocation();
   
   const handleNavigation = (href: string) => {
-    if (location.pathname === '/faq') {
-      // If we're on FAQ page, navigate to home first then scroll
-      if (href === '/') {
-        window.location.href = '/';
-      } else {
-        window.location.href = `/${href}`;
-      }
+    if (href === '/') {
+      // Scroll to hero section
+      document.getElementById('hero')?.scrollIntoView({ behavior: 'smooth' });
+    } else if (href.startsWith('#')) {
+      // Remove the # and find the element
+      const elementId = href.substring(1);
+      document.getElementById(elementId)?.scrollIntoView({ behavior: 'smooth' });
     } else {
-      // If we're on home page, just scroll
-      if (href.startsWith('#')) {
-        document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
-      } else if (href === '/') {
-        window.location.href = '/';
-      } else {
-        window.location.href = href;
-      }
+      // External link
+      window.location.href = href;
     }
   };
 
@@ -49,16 +43,16 @@ const Navigation = () => {
               <span>{t('Home')}</span>
             </button>
             <button 
+              onClick={() => handleNavigation('#how-it-works')}
+              className="nav-button"
+            >
+              <span>How It Works</span>
+            </button>
+            <button 
               onClick={() => handleNavigation('#powerful-features')}
               className="nav-button"
             >
               <span>{t('Features')}</span>
-            </button>
-            <button 
-              onClick={() => handleNavigation('#perfect-for-everyone')}
-              className="nav-button"
-            >
-              <span>{t('Potential Uses')}</span>
             </button>
             <button 
               onClick={() => handleNavigation('#ready-to-start')}

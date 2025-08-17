@@ -1,6 +1,6 @@
 import { Mountain, Leaf, GraduationCap } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { useScrollTransition } from "@/hooks/useScrollTransition";
+import useScrollTransition from "@/hooks/useScrollTransition";
 
 const Benefits = () => {
   const { t } = useLanguage();

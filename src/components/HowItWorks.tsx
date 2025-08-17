@@ -1,7 +1,7 @@
 import { Camera, Scan, Sparkles } from "lucide-react";
 import scanIllustration from "@/assets/scan-illustration.png";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { useScrollTransition } from "@/hooks/useScrollTransition";
+import useScrollTransition from "@/hooks/useScrollTransition";
 
 const HowItWorks = () => {
   const { t } = useLanguage();

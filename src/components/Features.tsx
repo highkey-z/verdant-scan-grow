@@ -1,7 +1,7 @@
 import { Brain, BookOpen, Clock, Users } from "lucide-react";
 import aiPlantIcon from "@/assets/ai-plant-icon.png";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { useScrollTransition } from "@/hooks/useScrollTransition";
+import useScrollTransition from "@/hooks/useScrollTransition";
 
 const Features = () => {
   const { t } = useLanguage();

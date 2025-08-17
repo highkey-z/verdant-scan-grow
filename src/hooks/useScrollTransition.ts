@@ -24,9 +24,13 @@ export const useScrollTransition = () => {
     observer.observe(element);
 
     return () => {
-      observer.unobserve(element);
+      if (element) {
+        observer.unobserve(element);
+      }
     };
   }, []);
 
   return ref;
 };
+
+export default useScrollTransition;

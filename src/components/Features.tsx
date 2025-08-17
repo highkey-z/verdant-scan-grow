@@ -29,14 +29,31 @@ const Features = () => {
     <section className="section-padding bg-gradient-to-br from-success/5 via-background to-primary/5 relative overflow-hidden">
       {/* Background Design Elements */}
       <div className="absolute inset-0 pointer-events-none">
-        {/* Animated Plant Icons */}
-        <div className="absolute top-16 left-12 text-3xl animate-pulse opacity-20" style={{animationDelay: '0.5s'}}>🌻</div>
-        <div className="absolute top-48 right-8 text-2xl animate-bounce opacity-15" style={{animationDelay: '1s'}}>🌼</div>
-        <div className="absolute bottom-24 left-8 text-xl animate-pulse opacity-25" style={{animationDelay: '0.3s'}}>🌷</div>
-        <div className="absolute top-72 left-1/4 text-2xl animate-bounce opacity-20" style={{animationDelay: '0.8s'}}>🪴</div>
-        <div className="absolute bottom-40 right-1/3 text-xl animate-pulse opacity-15" style={{animationDelay: '1.2s'}}>🌹</div>
-        <div className="absolute top-96 right-24 text-lg animate-bounce opacity-20" style={{animationDelay: '0.6s'}}>🌻</div>
-        <div className="absolute bottom-16 left-1/3 text-2xl animate-pulse opacity-18" style={{animationDelay: '0.9s'}}>🌵</div>
+        {/* Clean SVG Plant Icons */}
+        <svg className="absolute top-16 left-12 w-10 h-10 opacity-20 animate-pulse" viewBox="0 0 24 24" fill="none" style={{animationDelay: '0.5s'}}>
+          <path d="M12 2L15.09 8.26L22 9L16 14.74L18 22L12 19L6 22L8 14.74L2 9L8.91 8.26L12 2Z" fill="hsl(var(--success))" />
+        </svg>
+        <svg className="absolute top-48 right-8 w-8 h-8 opacity-15 animate-bounce" viewBox="0 0 24 24" fill="none" style={{animationDelay: '1s'}}>
+          <circle cx="12" cy="12" r="10" stroke="hsl(var(--primary))" strokeWidth="2" fill="hsl(var(--primary))" fillOpacity="0.1"/>
+          <path d="M8 14S9.5 16 12 16S16 14 16 14M9 9H9.01M15 9H15.01" stroke="hsl(var(--primary))" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+        <svg className="absolute bottom-24 left-8 w-9 h-9 opacity-25 animate-pulse" viewBox="0 0 24 24" fill="none" style={{animationDelay: '0.3s'}}>
+          <path d="M20.84 4.61A5.5 5.5 0 0 0 15.5 3H12V21L8 17H4A2 2 0 0 1 2 15V9A2 2 0 0 1 4 7H8L12 3H15.5A5.5 5.5 0 0 0 20.84 4.61Z" stroke="hsl(var(--nature-mint))" strokeWidth="2" fill="hsl(var(--nature-mint))" fillOpacity="0.1"/>
+        </svg>
+        <svg className="absolute top-72 left-1/4 w-7 h-7 opacity-20 animate-bounce" viewBox="0 0 24 24" fill="none" style={{animationDelay: '0.8s'}}>
+          <path d="M14 9V5A3 3 0 0 0 11 2A3 3 0 0 0 8 5V9" stroke="hsl(var(--success))" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M8 9H16L14 19H10L8 9Z" stroke="hsl(var(--success))" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+        <svg className="absolute bottom-40 right-1/3 w-6 h-6 opacity-15 animate-pulse" viewBox="0 0 24 24" fill="none" style={{animationDelay: '1.2s'}}>
+          <polygon points="13,2 3,14 12,14 11,22 21,10 12,10" stroke="hsl(var(--primary))" strokeWidth="2" fill="hsl(var(--primary))" fillOpacity="0.1"/>
+        </svg>
+        <svg className="absolute top-96 right-24 w-5 h-5 opacity-20 animate-bounce" viewBox="0 0 24 24" fill="none" style={{animationDelay: '0.6s'}}>
+          <path d="M12 2L13.09 8.26L19 7L14.74 13.09L19 17L12 15L5 17L9.26 13.09L5 7L10.91 8.26L12 2Z" stroke="hsl(var(--success))" strokeWidth="2" fill="hsl(var(--success))" fillOpacity="0.1"/>
+        </svg>
+        <svg className="absolute bottom-16 left-1/3 w-8 h-8 opacity-18 animate-pulse" viewBox="0 0 24 24" fill="none" style={{animationDelay: '0.9s'}}>
+          <path d="M9 12L11 14L15 10" stroke="hsl(var(--nature-mint))" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="hsl(var(--nature-mint))" strokeWidth="2"/>
+        </svg>
         
         {/* Geometric Patterns */}
         <svg className="absolute top-0 left-0 w-full h-full opacity-8" viewBox="0 0 1200 900">

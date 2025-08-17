@@ -24,13 +24,28 @@ const HowItWorks = () => {
     <section className="section-padding bg-gradient-to-b from-nature-mint/5 to-background relative overflow-hidden">
       {/* Background Design Elements */}
       <div className="absolute inset-0 pointer-events-none">
-        {/* Animated Plant Icons */}
-        <div className="absolute top-10 left-10 text-2xl animate-pulse opacity-20">🌱</div>
-        <div className="absolute top-32 right-16 text-xl animate-bounce opacity-15">🍃</div>
-        <div className="absolute bottom-20 left-20 text-lg animate-pulse opacity-25">🌿</div>
-        <div className="absolute top-64 left-1/3 text-xl animate-bounce opacity-20">🌾</div>
-        <div className="absolute bottom-32 right-1/4 text-2xl animate-pulse opacity-15">🌺</div>
-        <div className="absolute top-48 right-32 text-lg animate-bounce opacity-20">🌸</div>
+        {/* Plant SVG Icons */}
+        <svg className="absolute top-10 left-10 w-8 h-8 opacity-25 animate-pulse" viewBox="0 0 24 24" fill="none">
+          <path d="M12 2L13.09 8.26L19 7L14.74 13.09L19 17L12 15L5 17L9.26 13.09L5 7L10.91 8.26L12 2Z" fill="hsl(var(--success))" />
+        </svg>
+        <svg className="absolute top-32 right-16 w-6 h-6 opacity-20 animate-bounce" viewBox="0 0 24 24" fill="none">
+          <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="hsl(var(--primary))" strokeWidth="2" fill="hsl(var(--primary))" fillOpacity="0.1"/>
+          <path d="M8 12L12 8L16 12" stroke="hsl(var(--primary))" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+        <svg className="absolute bottom-20 left-20 w-7 h-7 opacity-22 animate-pulse" viewBox="0 0 24 24" fill="none" style={{animationDelay: '0.5s'}}>
+          <path d="M7 13L10 16L17 9" stroke="hsl(var(--success))" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          <circle cx="12" cy="12" r="9" stroke="hsl(var(--success))" strokeWidth="2" fill="hsl(var(--success))" fillOpacity="0.1"/>
+        </svg>
+        <svg className="absolute top-64 left-1/3 w-9 h-9 opacity-18 animate-bounce" viewBox="0 0 24 24" fill="none" style={{animationDelay: '0.8s'}}>
+          <path d="M22 11.08V12A10 10 0 1 1 5.93 7.25" stroke="hsl(var(--nature-mint))" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M22 4L12 14.01L9 11.01" stroke="hsl(var(--nature-mint))" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+        <svg className="absolute bottom-32 right-1/4 w-6 h-6 opacity-25 animate-pulse" viewBox="0 0 24 24" fill="none" style={{animationDelay: '1.2s'}}>
+          <polygon points="12,2 22,8.5 22,15.5 12,22 2,15.5 2,8.5" stroke="hsl(var(--primary))" strokeWidth="2" fill="hsl(var(--primary))" fillOpacity="0.1"/>
+        </svg>
+        <svg className="absolute top-48 right-32 w-5 h-5 opacity-20 animate-bounce" viewBox="0 0 24 24" fill="none" style={{animationDelay: '0.6s'}}>
+          <path d="M6 9L12 15L18 9" stroke="hsl(var(--success))" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
         
         {/* Flowing Lines */}
         <svg className="absolute top-0 left-0 w-full h-full opacity-10" viewBox="0 0 1200 800">
@@ -82,11 +97,6 @@ const HowItWorks = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
           {steps.map((step, index) => (
             <div key={index} className="relative group">
-              {/* Connection Line */}
-              {index < steps.length - 1 && (
-                <div className="hidden md:block absolute top-16 left-full w-full h-0.5 bg-gradient-to-r from-primary/30 to-success/30 transform translate-x-0 z-0"></div>
-              )}
-              
               <div className="nature-card p-8 text-center relative z-10">
                 <div className="flex justify-center mb-6">
                   <div className="feature-icon group-hover:scale-110">

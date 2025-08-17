@@ -41,15 +41,36 @@ const Benefits = () => {
     <section className="section-padding bg-gradient-to-br from-nature-mint/5 via-background to-success/8 relative overflow-hidden">
       {/* Background Design Elements */}
       <div className="absolute inset-0 pointer-events-none">
-        {/* Animated Plant Icons */}
-        <div className="absolute top-20 left-16 text-3xl animate-pulse opacity-22" style={{animationDelay: '0.4s'}}>🍀</div>
-        <div className="absolute top-64 right-12 text-2xl animate-bounce opacity-18" style={{animationDelay: '0.9s'}}>🌳</div>
-        <div className="absolute bottom-32 left-12 text-xl animate-pulse opacity-25" style={{animationDelay: '0.2s'}}>🌲</div>
-        <div className="absolute top-40 left-1/3 text-2xl animate-bounce opacity-20" style={{animationDelay: '1.1s'}}>🌴</div>
-        <div className="absolute bottom-48 right-1/4 text-xl animate-pulse opacity-16" style={{animationDelay: '0.7s'}}>🎋</div>
-        <div className="absolute top-80 right-28 text-lg animate-bounce opacity-20" style={{animationDelay: '0.5s'}}>🌿</div>
-        <div className="absolute bottom-20 left-1/4 text-2xl animate-pulse opacity-19" style={{animationDelay: '1.3s'}}>🪸</div>
-        <div className="absolute top-96 left-20 text-xl animate-bounce opacity-17" style={{animationDelay: '0.8s'}}>🌱</div>
+        {/* Clean SVG Plant Icons */}
+        <svg className="absolute top-20 left-16 w-12 h-12 opacity-22 animate-pulse" viewBox="0 0 24 24" fill="none" style={{animationDelay: '0.4s'}}>
+          <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="hsl(var(--success))" strokeWidth="2" fill="hsl(var(--success))" fillOpacity="0.1"/>
+          <polyline points="2,17 12,12 22,17" stroke="hsl(var(--success))" strokeWidth="2"/>
+          <polyline points="2,21 12,16 22,21" stroke="hsl(var(--success))" strokeWidth="2"/>
+        </svg>
+        <svg className="absolute top-64 right-12 w-9 h-9 opacity-18 animate-bounce" viewBox="0 0 24 24" fill="none" style={{animationDelay: '0.9s'}}>
+          <circle cx="12" cy="12" r="3" stroke="hsl(var(--nature-mint))" strokeWidth="2"/>
+          <path d="M12 1V3M12 21V23M4.22 4.22L5.64 5.64M18.36 18.36L19.78 19.78M1 12H3M21 12H23M4.22 19.78L5.64 18.36M18.36 5.64L19.78 4.22" stroke="hsl(var(--nature-mint))" strokeWidth="2"/>
+        </svg>
+        <svg className="absolute bottom-32 left-12 w-8 h-8 opacity-25 animate-pulse" viewBox="0 0 24 24" fill="none" style={{animationDelay: '0.2s'}}>
+          <path d="M21 16V8A2 2 0 0 0 19 6H5A2 2 0 0 0 3 8V16A2 2 0 0 0 5 18H19A2 2 0 0 0 21 16Z" stroke="hsl(var(--primary))" strokeWidth="2" fill="hsl(var(--primary))" fillOpacity="0.1"/>
+          <polyline points="7,10 12,15 17,10" stroke="hsl(var(--primary))" strokeWidth="2"/>
+        </svg>
+        <svg className="absolute top-40 left-1/3 w-10 h-10 opacity-20 animate-bounce" viewBox="0 0 24 24" fill="none" style={{animationDelay: '1.1s'}}>
+          <polygon points="12,2 15.09,8.26 22,9 16,14.74 18,22 12,19 6,22 8,14.74 2,9 8.91,8.26" stroke="hsl(var(--success))" strokeWidth="2" fill="hsl(var(--success))" fillOpacity="0.1"/>
+        </svg>
+        <svg className="absolute bottom-48 right-1/4 w-7 h-7 opacity-16 animate-pulse" viewBox="0 0 24 24" fill="none" style={{animationDelay: '0.7s'}}>
+          <path d="M22 12H18L15 21L9 3L6 12H2" stroke="hsl(var(--nature-mint))" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+        <svg className="absolute top-80 right-28 w-6 h-6 opacity-20 animate-bounce" viewBox="0 0 24 24" fill="none" style={{animationDelay: '0.5s'}}>
+          <path d="M9 11H15M9 15H15M17 3A2 2 0 0 1 19 5V19A2 2 0 0 1 17 21H7A2 2 0 0 1 5 19V5A2 2 0 0 1 7 3Z" stroke="hsl(var(--primary))" strokeWidth="2"/>
+        </svg>
+        <svg className="absolute bottom-20 left-1/4 w-9 h-9 opacity-19 animate-pulse" viewBox="0 0 24 24" fill="none" style={{animationDelay: '1.3s'}}>
+          <circle cx="11" cy="11" r="8" stroke="hsl(var(--success))" strokeWidth="2"/>
+          <path d="M21 21L16.65 16.65" stroke="hsl(var(--success))" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+        <svg className="absolute top-96 left-20 w-8 h-8 opacity-17 animate-bounce" viewBox="0 0 24 24" fill="none" style={{animationDelay: '0.8s'}}>
+          <path d="M17 21V13H7V21M7 13L12 8L17 13M6 21H18" stroke="hsl(var(--nature-mint))" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
         
         {/* Wavy Patterns */}
         <svg className="absolute top-0 left-0 w-full h-full opacity-10" viewBox="0 0 1200 1000">

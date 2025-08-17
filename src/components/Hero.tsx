@@ -18,17 +18,32 @@ const Hero = () => {
         
         {/* Additional geometric shapes */}
         <div className="absolute top-16 right-1/2 w-24 h-24 bg-gradient-to-br from-rose-100/70 to-pink-200/40 rounded-full shadow-md"></div>
-        <div className="absolute bottom-16 left-1/2 w-36 h-36 border-3 border-emerald-300/50 rounded-lg rotate-45"></div>
+        <div className="absolute bottom-16 right-1/4 w-36 h-36 border-3 border-emerald-300/50 rounded-lg rotate-45"></div>
         
-        {/* Plant-themed decorative leaves */}
-        <div className="absolute top-1/3 left-12">
-          <Leaf className="w-8 h-8 text-emerald-300/60 transform rotate-12 animate-pulse" />
+        {/* More Glowing Plant Icons */}
+        <div className="absolute top-1/4 left-8">
+          <Leaf className="w-8 h-8 text-emerald-400/70 transform rotate-12 animate-pulse drop-shadow-lg" />
         </div>
-        <div className="absolute bottom-1/3 right-12">
-          <Flower className="w-6 h-6 text-rose-300/60 transform -rotate-12 animate-pulse" style={{animationDelay: '0.5s'}} />
+        <div className="absolute bottom-1/3 right-8">
+          <Flower className="w-6 h-6 text-rose-400/70 transform -rotate-12 animate-pulse drop-shadow-lg" style={{animationDelay: '0.5s'}} />
         </div>
-        <div className="absolute top-2/3 left-1/4">
-          <Sprout className="w-7 h-7 text-teal-300/60 transform rotate-45 animate-pulse" style={{animationDelay: '1.5s'}} />
+        <div className="absolute top-2/3 left-1/5">
+          <Sprout className="w-7 h-7 text-teal-400/70 transform rotate-45 animate-pulse drop-shadow-lg" style={{animationDelay: '1.5s'}} />
+        </div>
+        <div className="absolute top-16 left-1/2">
+          <TreePine className="w-6 h-6 text-emerald-400/70 transform -rotate-30 animate-pulse drop-shadow-lg" style={{animationDelay: '0.8s'}} />
+        </div>
+        <div className="absolute bottom-20 left-16">
+          <Cherry className="w-5 h-5 text-rose-400/70 transform rotate-60 animate-pulse drop-shadow-lg" style={{animationDelay: '1.2s'}} />
+        </div>
+        <div className="absolute top-1/2 right-20">
+          <Flower className="w-7 h-7 text-pink-400/70 transform rotate-90 animate-pulse drop-shadow-lg" style={{animationDelay: '2s'}} />
+        </div>
+        <div className="absolute bottom-1/2 left-8">
+          <Leaf className="w-6 h-6 text-teal-400/70 transform -rotate-45 animate-pulse drop-shadow-lg" style={{animationDelay: '0.3s'}} />
+        </div>
+        <div className="absolute top-3/4 right-16">
+          <Sprout className="w-5 h-5 text-emerald-400/70 transform rotate-12 animate-pulse drop-shadow-lg" style={{animationDelay: '1.8s'}} />
         </div>
         
         {/* Geometric grid pattern */}
@@ -45,19 +60,14 @@ const Hero = () => {
           ))}
         </div>
         
-        {/* Flowing lines */}
-        <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-emerald-300/60 to-transparent"></div>
-        <div className="absolute top-1/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-teal-300/40 to-transparent"></div>
-        <div className="absolute top-2/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-rose-300/30 to-transparent"></div>
-        
         {/* Corner accent triangles */}
         <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-emerald-200/50 to-transparent transform rotate-45 translate-x-16 -translate-y-16"></div>
-        <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-teal-200/50 to-transparent transform rotate-45 -translate-x-12 translate-y-12"></div>
+        <div className="absolute bottom-0 right-0 w-24 h-24 bg-gradient-to-tr from-teal-200/50 to-transparent transform rotate-45 translate-x-12 translate-y-12"></div>
         
         {/* Enhanced floating hexagons */}
         <div className="absolute top-32 right-1/3 w-16 h-16 border-2 border-emerald-300/70 transform rotate-30 hover-scale" style={{clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)'}}>
         </div>
-        <div className="absolute bottom-32 left-1/4 w-12 h-12 border-2 border-teal-300/70 transform -rotate-30 hover-scale" style={{clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)'}}>
+        <div className="absolute bottom-32 right-1/3 w-12 h-12 border-2 border-teal-300/70 transform -rotate-30 hover-scale" style={{clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)'}}>
         </div>
         <div className="absolute top-3/4 right-1/4 w-14 h-14 border-2 border-rose-300/70 transform rotate-60 hover-scale" style={{clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)'}}>
         </div>
@@ -73,10 +83,6 @@ const Hero = () => {
         {/* Floating diamond shapes */}
         <div className="absolute top-20 left-1/3 w-6 h-6 bg-gradient-to-br from-emerald-200/80 to-emerald-300/60 transform rotate-45 animate-pulse"></div>
         <div className="absolute bottom-20 right-1/3 w-8 h-8 bg-gradient-to-br from-teal-200/80 to-teal-300/60 transform rotate-45 animate-pulse" style={{animationDelay: '0.7s'}}></div>
-        
-        {/* Organic flowing curves */}
-        <div className="absolute top-1/4 left-0 w-48 h-2 bg-gradient-to-r from-transparent via-emerald-200/60 to-transparent transform -rotate-12 rounded-full"></div>
-        <div className="absolute bottom-1/4 right-0 w-64 h-2 bg-gradient-to-l from-transparent via-teal-200/60 to-transparent transform rotate-12 rounded-full"></div>
       </div>
       {/* Plant Bubbles - Positioned in safe areas with white borders */}
       
@@ -100,8 +106,8 @@ const Hero = () => {
         <img src="/lovable-uploads/b8d0116b-bd26-4705-b97e-0214dd5d0914.png" alt="Colorful caladium leaf" className="w-full h-full object-cover rounded-full" />
       </div>
       
-      {/* Bottom corner decorative */}
-      <div className="absolute bottom-4 left-4 w-14 h-14 rounded-full border-4 border-white shadow-lg overflow-hidden bg-white hover-scale">
+      {/* Bottom corner decorative - moved away from buttons */}
+      <div className="absolute bottom-4 right-1/3 w-14 h-14 rounded-full border-4 border-white shadow-lg overflow-hidden bg-white hover-scale">
         <img src="/lovable-uploads/633c4de1-8c64-453f-ba9a-a71f4651e293.png" alt="Plumeria flowers" className="w-full h-full object-cover rounded-full" />
       </div>
 

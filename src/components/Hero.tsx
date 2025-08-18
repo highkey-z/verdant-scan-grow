@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Download, Play, Star, Camera, Leaf, Flower, TreePine, Sprout, Cherry, Shield, Heart, Droplets, Sun, Users, Recycle, Image } from "lucide-react";
 import qrCode from "@/assets/qr-code.png";
@@ -6,6 +7,14 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 const Hero = () => {
   const { t } = useLanguage();
+  const [showSecret, setShowSecret] = useState(false);
+
+  const handleCameraClick = () => {
+    setShowSecret(true);
+    setTimeout(() => {
+      setShowSecret(false);
+    }, 5000);
+  };
   
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-emerald-50 via-white to-teal-50 min-h-[90vh]">
@@ -176,6 +185,21 @@ const Hero = () => {
                   <div className="absolute inset-0">
                     <img src={roseCameraView} alt="Rose in camera viewfinder" className="w-full h-full object-cover" />
                     
+                    {/* Secret Popup */}
+                    {showSecret && (
+                      <div className="absolute inset-0 bg-black/90 flex items-center justify-center z-50 animate-fade-in">
+                        <div className="bg-gradient-to-br from-emerald-500 to-teal-600 p-8 rounded-2xl text-center max-w-xs mx-4 shadow-2xl">
+                          <div className="text-3xl mb-4">🎉</div>
+                          <div className="text-white font-bold text-lg mb-2">You Found the Secret!</div>
+                          <div className="text-emerald-100 text-sm mb-4">Use Code</div>
+                          <div className="bg-white text-emerald-600 font-bold text-lg py-2 px-4 rounded-lg mb-3">
+                            FOUNDERSGIFT10
+                          </div>
+                          <div className="text-emerald-100 text-sm">on Your Next Order</div>
+                        </div>
+                      </div>
+                    )}
+
                     {/* Camera UI Overlay */}
                     <div className="absolute inset-0 flex flex-col justify-between p-6">
                       {/* Top UI - removed Unlimited IDs */}
@@ -203,9 +227,12 @@ const Hero = () => {
                           </div>
                           <span className="text-xs text-white">Gallery</span>
                         </div>
-                        <div className="w-16 h-16 bg-white rounded-full border-4 border-white/50 flex items-center justify-center">
+                        <button 
+                          onClick={handleCameraClick}
+                          className="w-16 h-16 bg-white rounded-full border-4 border-emerald-400/80 flex items-center justify-center hover:scale-105 transition-all duration-200 cursor-pointer"
+                        >
                           <Camera className="w-8 h-8 text-gray-600" />
-                        </div>
+                        </button>
                         <div className="text-center">
                           <div className="w-8 h-8 bg-white/20 rounded-full mb-1 mx-auto flex items-center justify-center">
                             <span className="text-white text-xs">↻</span>

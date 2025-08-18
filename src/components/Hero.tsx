@@ -169,7 +169,7 @@ const Hero = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 rounded-full blur-3xl"></div>
             {/* Main Phone - Camera View */}
             <div className="relative z-10">
-              <div className="w-96 h-[720px] bg-gradient-to-b from-emerald-200 to-emerald-100 rounded-[3rem] p-2 shadow-[0_0_80px_rgba(5,150,105,0.6),0_0_120px_rgba(5,150,105,0.3),0_0_160px_rgba(5,150,105,0.1)] hover-scale drop-shadow-2xl">
+              <div className="w-88 h-[680px] bg-gradient-to-b from-emerald-200 to-emerald-100 rounded-[3rem] p-2 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.4),0_0_0_1px_rgba(255,255,255,0.1)] hover-scale drop-shadow-2xl">
                 <div className="w-full h-full bg-black rounded-[2.5rem] overflow-hidden relative shadow-inner">
                   {/* Camera Interface */}
                   <div className="absolute inset-0">
@@ -238,7 +238,7 @@ const Hero = () => {
 
             {/* Secondary Phone - Enhanced Results */}
             <div className="absolute -right-8 top-8 z-0">
-              <div className="w-96 h-[648px] bg-gradient-to-b from-rose-200 to-pink-100 rounded-[2.5rem] p-2 shadow-[0_0_80px_rgba(236,72,153,0.6),0_0_120px_rgba(236,72,153,0.3),0_0_160px_rgba(236,72,153,0.1)] hover-scale drop-shadow-2xl">
+              <div className="w-88 h-[612px] bg-gradient-to-b from-rose-200 to-pink-100 rounded-[2.5rem] p-2 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.4),0_0_0_1px_rgba(255,255,255,0.1)] hover-scale drop-shadow-2xl">
                 <div className="w-full h-full bg-white rounded-[2rem] overflow-hidden">
                   <div className="p-4 space-y-4">
                     {/* Header */}

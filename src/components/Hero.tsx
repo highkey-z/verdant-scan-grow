@@ -30,7 +30,7 @@ const Hero = () => {
         
         {/* Additional geometric shapes */}
         <div className="absolute top-16 right-1/2 w-24 h-24 bg-gradient-to-br from-emerald-100/70 to-emerald-200/40 rounded-full shadow-md"></div>
-        <div className="absolute -bottom-4 right-1/4 w-36 h-36 border-3 border-emerald-300/50 rounded-lg rotate-45"></div>
+        <div className="absolute -bottom-20 right-1/4 w-36 h-36 border-3 border-emerald-300/50 rounded-lg rotate-45"></div>
         
         {/* Blurred Organic Plant Silhouettes */}
         <div className="absolute top-1/4 left-8 w-24 h-32 bg-gradient-to-br from-emerald-300/20 to-emerald-400/10 blur-xl rounded-[60%_40%_30%_70%/60%_30%_70%_40%] animate-pulse" style={{animationDelay: '0.5s'}}></div>
@@ -130,7 +130,7 @@ const Hero = () => {
             </div>
 
             {/* Download Buttons */}
-            <div className="space-y-6 animate-fade-in">
+            <div className="space-y-12 animate-fade-in">
               <a href="https://apps.apple.com/app/verdant" target="_blank" rel="noopener noreferrer">
                 <Button size="lg" className="relative bg-black text-white hover:bg-black/90 flex items-center gap-3 px-6 rounded-xl w-64 overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full animate-[shimmer_2s_infinite] skew-x-12"></div>

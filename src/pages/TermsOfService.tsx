@@ -15,7 +15,7 @@ const TermsOfService = () => {
         
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl font-bold text-gradient mb-6">Terms of Service</h1>
-          <p className="text-sm text-muted-foreground mb-8">Last updated: December 2024</p>
+          <p className="text-sm text-muted-foreground mb-8">Last updated: August 2025</p>
           
           <div className="prose prose-lg max-w-none space-y-8">
             <section>
@@ -95,8 +95,8 @@ const TermsOfService = () => {
               <h2 className="text-2xl font-semibold mb-4">Contact Information</h2>
               <p className="text-muted-foreground">
                 For questions about these Terms of Service, please contact us at{" "}
-                <a href="mailto:legal@useverdantai.com" className="text-primary hover:underline">
-                  legal@useverdantai.com
+                <a href="mailto:useverdantai@gmail.com" className="text-primary hover:underline">
+                  useverdantai@gmail.com
                 </a>
               </p>
             </section>

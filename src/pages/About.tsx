@@ -36,11 +36,15 @@ const About = () => {
               and improves, making it more accurate with every scan.
             </p>
             
-            <h2 className="text-2xl font-semibold mb-4">Our Team</h2>
+            <h2 className="text-2xl font-semibold mb-4">Our Story</h2>
             <p className="text-muted-foreground">
-              Our team consists of passionate botanists, AI researchers, and nature lovers who are 
-              dedicated to bridging the gap between technology and the natural world. Together, 
-              we're building the future of botanical education.
+              UseVerdant was founded by two young innovators, Ehsan (16) and Pranav (15), who shared 
+              a passion for both technology and nature. Frustrated by the difficulty of identifying 
+              plants during their outdoor adventures, they decided to create an app that would make 
+              botanical knowledge accessible to everyone. What started as a school project quickly 
+              evolved into a sophisticated AI-powered platform that helps millions of users connect 
+              with the natural world around them. Their vision continues to drive UseVerdant's mission 
+              of making plant identification simple, accurate, and educational for users of all ages.
             </p>
           </div>
         </div>

@@ -29,34 +29,18 @@ const Hero = () => {
         <div className="absolute bottom-1/4 left-1/3 w-32 h-32 bg-gradient-to-tr from-teal-100/80 to-teal-200/40 rounded-2xl -rotate-12 shadow-lg hover-scale"></div>
         
         {/* Additional geometric shapes */}
-        <div className="absolute top-16 right-1/2 w-24 h-24 bg-gradient-to-br from-rose-100/70 to-pink-200/40 rounded-full shadow-md"></div>
-        <div className="absolute bottom-16 right-1/4 w-36 h-36 border-3 border-emerald-300/50 rounded-lg rotate-45"></div>
+        <div className="absolute top-16 right-1/2 w-24 h-24 bg-gradient-to-br from-emerald-100/70 to-emerald-200/40 rounded-full shadow-md"></div>
+        <div className="absolute bottom-32 right-1/4 w-36 h-36 border-3 border-emerald-300/50 rounded-lg rotate-45"></div>
         
-        {/* More Glowing Plant Icons */}
-        <div className="absolute top-1/4 left-8">
-          <Leaf className="w-8 h-8 text-emerald-400/70 transform rotate-12 animate-pulse drop-shadow-lg" />
-        </div>
-        <div className="absolute bottom-1/3 right-8">
-          <Flower className="w-6 h-6 text-rose-400/70 transform -rotate-12 animate-pulse drop-shadow-lg" style={{animationDelay: '0.5s'}} />
-        </div>
-        <div className="absolute top-2/3 left-1/5">
-          <Sprout className="w-7 h-7 text-teal-400/70 transform rotate-45 animate-pulse drop-shadow-lg" style={{animationDelay: '1.5s'}} />
-        </div>
-        <div className="absolute top-16 left-1/2">
-          <TreePine className="w-6 h-6 text-emerald-400/70 transform -rotate-30 animate-pulse drop-shadow-lg" style={{animationDelay: '0.8s'}} />
-        </div>
-        <div className="absolute bottom-20 left-16">
-          <Cherry className="w-5 h-5 text-rose-400/70 transform rotate-60 animate-pulse drop-shadow-lg" style={{animationDelay: '1.2s'}} />
-        </div>
-        <div className="absolute top-1/2 right-20">
-          <Flower className="w-7 h-7 text-pink-400/70 transform rotate-90 animate-pulse drop-shadow-lg" style={{animationDelay: '2s'}} />
-        </div>
-        <div className="absolute bottom-1/2 left-8">
-          <Leaf className="w-6 h-6 text-teal-400/70 transform -rotate-45 animate-pulse drop-shadow-lg" style={{animationDelay: '0.3s'}} />
-        </div>
-        <div className="absolute top-3/4 right-16">
-          <Sprout className="w-5 h-5 text-emerald-400/70 transform rotate-12 animate-pulse drop-shadow-lg" style={{animationDelay: '1.8s'}} />
-        </div>
+        {/* Blurred Organic Plant Silhouettes */}
+        <div className="absolute top-1/4 left-8 w-24 h-32 bg-gradient-to-br from-emerald-300/20 to-emerald-400/10 blur-xl rounded-[60%_40%_30%_70%/60%_30%_70%_40%] animate-pulse" style={{animationDelay: '0.5s'}}></div>
+        <div className="absolute bottom-1/3 right-8 w-20 h-28 bg-gradient-to-br from-teal-300/20 to-teal-400/10 blur-xl rounded-[40%_60%_70%_30%/70%_40%_30%_60%] animate-pulse" style={{animationDelay: '1s'}}></div>
+        <div className="absolute top-2/3 left-1/5 w-16 h-24 bg-gradient-to-br from-emerald-300/15 to-emerald-400/8 blur-xl rounded-[50%_50%_80%_20%/40%_60%_40%_60%] animate-pulse" style={{animationDelay: '1.5s'}}></div>
+        <div className="absolute top-16 left-1/2 w-18 h-26 bg-gradient-to-br from-teal-300/15 to-teal-400/8 blur-xl rounded-[70%_30%_50%_50%/30%_70%_50%_50%] animate-pulse" style={{animationDelay: '0.8s'}}></div>
+        <div className="absolute bottom-20 left-16 w-14 h-20 bg-gradient-to-br from-emerald-300/18 to-emerald-400/10 blur-xl rounded-[30%_70%_40%_60%/60%_40%_70%_30%] animate-pulse" style={{animationDelay: '1.2s'}}></div>
+        <div className="absolute top-1/2 right-20 w-22 h-30 bg-gradient-to-br from-teal-300/18 to-teal-400/10 blur-xl rounded-[60%_40%_70%_30%/40%_60%_30%_70%] animate-pulse" style={{animationDelay: '2s'}}></div>
+        <div className="absolute bottom-1/2 left-8 w-16 h-22 bg-gradient-to-br from-emerald-300/16 to-emerald-400/8 blur-xl rounded-[50%_50%_60%_40%/50%_50%_60%_40%] animate-pulse" style={{animationDelay: '0.3s'}}></div>
+        <div className="absolute top-3/4 right-16 w-12 h-18 bg-gradient-to-br from-teal-300/16 to-teal-400/8 blur-xl rounded-[40%_60%_50%_50%/70%_30%_50%_50%] animate-pulse" style={{animationDelay: '1.8s'}}></div>
         
         {/* Geometric grid pattern */}
         <div className="absolute top-16 left-16 grid grid-cols-4 gap-8 opacity-30">
@@ -81,7 +65,7 @@ const Hero = () => {
         </div>
         <div className="absolute bottom-32 right-1/3 w-12 h-12 border-2 border-teal-300/70 transform -rotate-30 hover-scale" style={{clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)'}}>
         </div>
-        <div className="absolute top-3/4 right-1/4 w-14 h-14 border-2 border-rose-300/70 transform rotate-60 hover-scale" style={{clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)'}}>
+        <div className="absolute top-3/4 right-1/4 w-14 h-14 border-2 border-emerald-300/70 transform rotate-60 hover-scale" style={{clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)'}}>
         </div>
         
         {/* Radial burst pattern */}
@@ -133,8 +117,8 @@ const Hero = () => {
                 <span className="bg-gradient-to-r from-emerald-600 via-teal-600 to-emerald-700 bg-clip-text text-transparent">UseVerdant</span>
               </h1>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-foreground/90">
-                {t('AI Botanist In Your Pocket').split(' ').slice(0, 3).join(' ')}<br />
-                {t('AI Botanist In Your Pocket').split(' ').slice(3).join(' ')}
+                <span className="bg-gradient-to-r from-emerald-400 to-emerald-600 bg-clip-text text-transparent">AI</span> Botanist In Your<br />
+                Pocket
               </h2>
             </div>
 
@@ -146,9 +130,9 @@ const Hero = () => {
             </div>
 
             {/* Download Buttons */}
-            <div className="space-y-3 animate-fade-in">
+            <div className="bg-gradient-to-r from-emerald-50/80 to-teal-50/80 backdrop-blur-sm rounded-3xl p-6 border border-emerald-100/50 space-y-4 animate-fade-in max-w-sm">
               <a href="https://apps.apple.com/app/verdant" target="_blank" rel="noopener noreferrer">
-                <Button size="lg" className="bg-black text-white hover:bg-black/90 flex items-center gap-3 px-6 rounded-xl w-64">
+                <Button size="lg" className="bg-black text-white hover:bg-black/90 flex items-center gap-3 px-6 rounded-xl w-full">
                   <div className="w-6 h-6 bg-white rounded-sm flex items-center justify-center">
                     <svg className="w-4 h-4" viewBox="0 0 24 24" fill="black">
                       <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
@@ -161,7 +145,7 @@ const Hero = () => {
                 </Button>
               </a>
               <a href="https://play.google.com/store/apps/details?id=com.verdant" target="_blank" rel="noopener noreferrer">
-                <Button size="lg" className="bg-black text-white hover:bg-black/90 flex items-center gap-3 px-6 rounded-xl w-64">
+                <Button size="lg" className="bg-black text-white hover:bg-black/90 flex items-center gap-3 px-6 rounded-xl w-full">
                   <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
                     <path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.609-.92z" fill="#EA4335"/>
                     <path d="M13.792 12L3.609 1.814a1.006 1.006 0 01.703-.269 1.006 1.006 0 01.703.269L16.5 7.5 13.792 12z" fill="#FBBC04"/>
@@ -183,8 +167,8 @@ const Hero = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 rounded-full blur-3xl"></div>
             {/* Main Phone - Camera View */}
             <div className="relative z-10">
-              <div className="w-80 h-[600px] bg-gradient-to-b from-emerald-200 to-emerald-100 rounded-[3rem] p-2 shadow-2xl hover-scale drop-shadow-2xl shadow-emerald-500/20">
-                <div className="w-full h-full bg-black rounded-[2.5rem] overflow-hidden relative">
+              <div className="w-80 h-[600px] bg-gradient-to-b from-emerald-200 to-emerald-100 rounded-[3rem] p-2 shadow-[0_0_60px_rgba(5,150,105,0.4)] hover-scale drop-shadow-2xl">
+                <div className="w-full h-full bg-black rounded-[2.5rem] overflow-hidden relative shadow-inner">
                   {/* Camera Interface */}
                   <div className="absolute inset-0">
                     <img src={roseCameraView} alt="Rose in camera viewfinder" className="w-full h-full object-cover" />
@@ -215,11 +199,11 @@ const Hero = () => {
                       
                       {/* Center Focus Square */}
                       <div className="flex justify-center items-center">
-                        <div className="w-32 h-32 border-2 border-white/80 rounded-lg relative">
-                          <div className="absolute -top-1 -left-1 w-4 h-4 border-l-2 border-t-2 border-white"></div>
-                          <div className="absolute -top-1 -right-1 w-4 h-4 border-r-2 border-t-2 border-white"></div>
-                          <div className="absolute -bottom-1 -left-1 w-4 h-4 border-l-2 border-b-2 border-white"></div>
-                          <div className="absolute -bottom-1 -right-1 w-4 h-4 border-r-2 border-b-2 border-white"></div>
+                        <div className="w-32 h-32 border-2 border-white/80 rounded-lg relative animate-pulse">
+                          <div className="absolute -top-1 -left-1 w-4 h-4 border-l-2 border-t-2 border-white animate-ping"></div>
+                          <div className="absolute -top-1 -right-1 w-4 h-4 border-r-2 border-t-2 border-white animate-ping" style={{animationDelay: '0.2s'}}></div>
+                          <div className="absolute -bottom-1 -left-1 w-4 h-4 border-l-2 border-b-2 border-white animate-ping" style={{animationDelay: '0.4s'}}></div>
+                          <div className="absolute -bottom-1 -right-1 w-4 h-4 border-r-2 border-b-2 border-white animate-ping" style={{animationDelay: '0.6s'}}></div>
                         </div>
                       </div>
                       

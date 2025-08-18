@@ -94,8 +94,10 @@ const handler = async (req: Request): Promise<Response> => {
         throw new Error(`Unknown email type: ${emailData.type}`);
     }
 
+    console.log("Attempting to send email with API key:", Deno.env.get("RESEND_API_KEY") ? "Key exists" : "Key missing");
+    
     const emailResponse = await resend.emails.send({
-      from: "Verdant AI <onboarding@resend.dev>",
+      from: "onboarding@resend.dev",
       to: ["useverdantai@gmail.com"],
       subject: emailSubject,
       html: emailHtml,

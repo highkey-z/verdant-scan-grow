@@ -25,7 +25,7 @@ const Hero = () => {
         <div className="absolute -bottom-32 -left-32 w-80 h-80 border-4 border-teal-200/60 rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
         
         {/* Medium decorative elements */}
-        <div className="absolute top-2/3 right-1/4 w-48 h-48 bg-gradient-to-br from-emerald-100/80 to-emerald-200/40 rounded-3xl rotate-12 shadow-lg hover-scale"></div>
+        <div className="absolute top-1/4 right-1/4 w-48 h-48 bg-gradient-to-br from-emerald-100/80 to-emerald-200/40 rounded-3xl rotate-12 shadow-lg hover-scale"></div>
         <div className="absolute bottom-1/4 left-1/3 w-32 h-32 bg-gradient-to-tr from-teal-100/80 to-teal-200/40 rounded-2xl -rotate-12 shadow-lg hover-scale"></div>
         
         {/* Additional geometric shapes */}
@@ -130,7 +130,7 @@ const Hero = () => {
             </div>
 
             {/* Download Buttons */}
-            <div className="space-y-6 animate-fade-in">
+            <div className="space-y-12 animate-fade-in">
               <a href="https://apps.apple.com/app/verdant" target="_blank" rel="noopener noreferrer">
                 <Button size="lg" className="relative bg-black text-white hover:bg-black/90 flex items-center gap-3 px-6 rounded-xl w-64 overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full animate-[shimmer_2s_infinite] skew-x-12"></div>
@@ -145,23 +145,21 @@ const Hero = () => {
                   </div>
                 </Button>
               </a>
-              <div className="mt-3">
-                <a href="https://play.google.com/store/apps/details?id=com.verdant" target="_blank" rel="noopener noreferrer">
-                  <Button size="lg" className="relative bg-black text-white hover:bg-black/90 flex items-center gap-3 px-6 rounded-xl w-64 overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full animate-[shimmer_2s_infinite] skew-x-12" style={{animationDelay: '1s'}}></div>
-                    <svg className="w-6 h-6 relative z-10" viewBox="0 0 24 24" fill="none">
-                      <path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.609-.92z" fill="#EA4335"/>
-                      <path d="M13.792 12L3.609 1.814a1.006 1.006 0 01.703-.269 1.006 1.006 0 01.703.269L16.5 7.5 13.792 12z" fill="#FBBC04"/>
-                      <path d="M13.792 12L16.5 16.5 5.015 22.186a1.006 1.006 0 01-.703.269 1.006 1.006 0 01-.703-.269L13.792 12z" fill="#34A853"/>
-                      <path d="M13.792 12L16.5 7.5l4.146-2.341a1 1 0 01.354.734v9.107a1 1 0 01-.354.734L16.5 16.5 13.792 12z" fill="#4285F4"/>
-                    </svg>
-                    <div className="text-left relative z-10">
-                      <div className="text-xs opacity-80">{t('GET IT ON')}</div>
-                      <div className="font-semibold">{t('Google Play')}</div>
-                    </div>
-                  </Button>
-                </a>
-              </div>
+              <a href="https://play.google.com/store/apps/details?id=com.verdant" target="_blank" rel="noopener noreferrer">
+                <Button size="lg" className="relative bg-black text-white hover:bg-black/90 flex items-center gap-3 px-6 rounded-xl w-64 overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full animate-[shimmer_2s_infinite] skew-x-12" style={{animationDelay: '1s'}}></div>
+                  <svg className="w-6 h-6 relative z-10" viewBox="0 0 24 24" fill="none">
+                    <path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.609-.92z" fill="#EA4335"/>
+                    <path d="M13.792 12L3.609 1.814a1.006 1.006 0 01.703-.269 1.006 1.006 0 01.703.269L16.5 7.5 13.792 12z" fill="#FBBC04"/>
+                    <path d="M13.792 12L16.5 16.5 5.015 22.186a1.006 1.006 0 01-.703.269 1.006 1.006 0 01-.703-.269L13.792 12z" fill="#34A853"/>
+                    <path d="M13.792 12L16.5 7.5l4.146-2.341a1 1 0 01.354.734v9.107a1 1 0 01-.354.734L16.5 16.5 13.792 12z" fill="#4285F4"/>
+                  </svg>
+                  <div className="text-left relative z-10">
+                    <div className="text-xs opacity-80">{t('GET IT ON')}</div>
+                    <div className="font-semibold">{t('Google Play')}</div>
+                  </div>
+                </Button>
+              </a>
             </div>
 
           </div>
@@ -171,7 +169,7 @@ const Hero = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 rounded-full blur-3xl"></div>
             {/* Main Phone - Camera View */}
             <div className="relative z-10">
-              <div className="w-84 h-[620px] bg-gradient-to-b from-emerald-200 to-emerald-100 rounded-[3rem] p-2 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.25)] hover-scale">
+              <div className="w-80 h-[600px] bg-gradient-to-b from-emerald-200 to-emerald-100 rounded-[3rem] p-2 shadow-[0_0_60px_rgba(5,150,105,0.4)] hover-scale drop-shadow-2xl">
                 <div className="w-full h-full bg-black rounded-[2.5rem] overflow-hidden relative shadow-inner">
                   {/* Camera Interface */}
                   <div className="absolute inset-0">
@@ -240,7 +238,7 @@ const Hero = () => {
 
             {/* Secondary Phone - Enhanced Results */}
             <div className="absolute -right-8 top-8 z-0">
-              <div className="w-84 h-[560px] bg-gradient-to-b from-rose-200 to-pink-100 rounded-[2.5rem] p-2 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.25)] hover-scale">
+              <div className="w-80 h-[540px] bg-gradient-to-b from-rose-200 to-pink-100 rounded-[2.5rem] p-2 shadow-2xl hover-scale drop-shadow-2xl shadow-rose-500/20">
                 <div className="w-full h-full bg-white rounded-[2rem] overflow-hidden">
                   <div className="p-4 space-y-4">
                     {/* Header */}

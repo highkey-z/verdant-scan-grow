@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { Search, Globe, ChevronDown } from "lucide-react";
 import { useLanguage, languages } from "@/contexts/LanguageContext";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 
 const Navigation = () => {
   const { currentLanguage, setLanguage, t } = useLanguage();
@@ -29,19 +29,19 @@ const Navigation = () => {
           {/* Logo */}
           <div className="flex items-center gap-3">
             <img src="/lovable-uploads/8652cabd-a4d5-4343-ad90-300bbc7fbd50.png" alt="UseVerdant Plant Logo" className="w-10 h-10" />
-            <a href="/" className="text-xl font-bold text-primary hover:text-primary/80 transition-colors">
+            <Link to="/" className="text-xl font-bold text-primary hover:text-primary/80 transition-colors">
               UseVerdant
-            </a>
+            </Link>
           </div>
 
           {/* Navigation Links */}
           <div className="hidden md:flex items-center gap-8">
-            <button 
-              onClick={() => handleNavigation('/')}
+            <Link 
+              to="/"
               className="nav-button"
             >
               <span>{t('Home')}</span>
-            </button>
+            </Link>
             <button 
               onClick={() => handleNavigation('#how-it-works')}
               className="nav-button"
@@ -60,9 +60,9 @@ const Navigation = () => {
             >
               <span>{t('Download')}</span>
             </button>
-            <a href="/faq" className="nav-button">
+            <Link to="/faq" className="nav-button">
               <span>{t('FAQ')}</span>
-            </a>
+            </Link>
             
             {/* Language Dropdown */}
             <DropdownMenu>

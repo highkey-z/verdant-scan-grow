@@ -129,10 +129,10 @@ const Hero = () => {
           <div className="space-y-8">
             {/* Main Heading */}
             <div className="space-y-6 animate-fade-in">
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight">
+              <h1 className="text-6xl sm:text-7xl lg:text-8xl font-black leading-tight">
                 <span className="bg-gradient-to-r from-emerald-600 via-teal-600 to-emerald-700 bg-clip-text text-transparent">UseVerdant</span>
               </h1>
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground/90">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-foreground/90">
                 {t('AI Botanist In Your Pocket').split(' ').slice(0, 3).join(' ')}<br />
                 {t('AI Botanist In Your Pocket').split(' ').slice(3).join(' ')}
               </h2>
@@ -147,29 +147,33 @@ const Hero = () => {
 
             {/* Download Buttons */}
             <div className="space-y-3 animate-fade-in">
-              <Button size="lg" className="bg-black text-white hover:bg-black/90 flex items-center gap-3 px-6 rounded-xl w-64">
-                <div className="w-6 h-6 bg-white rounded-sm flex items-center justify-center">
-                  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="black">
-                    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+              <a href="https://apps.apple.com/app/verdant" target="_blank" rel="noopener noreferrer">
+                <Button size="lg" className="bg-black text-white hover:bg-black/90 flex items-center gap-3 px-6 rounded-xl w-64">
+                  <div className="w-6 h-6 bg-white rounded-sm flex items-center justify-center">
+                    <svg className="w-4 h-4" viewBox="0 0 24 24" fill="black">
+                      <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                    </svg>
+                  </div>
+                  <div className="text-left">
+                    <div className="text-xs opacity-80">{t('Download on the')}</div>
+                    <div className="font-semibold">{t('App Store')}</div>
+                  </div>
+                </Button>
+              </a>
+              <a href="https://play.google.com/store/apps/details?id=com.verdant" target="_blank" rel="noopener noreferrer">
+                <Button size="lg" className="bg-black text-white hover:bg-black/90 flex items-center gap-3 px-6 rounded-xl w-64">
+                  <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
+                    <path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.609-.92z" fill="#EA4335"/>
+                    <path d="M13.792 12L3.609 1.814a1.006 1.006 0 01.703-.269 1.006 1.006 0 01.703.269L16.5 7.5 13.792 12z" fill="#FBBC04"/>
+                    <path d="M13.792 12L16.5 16.5 5.015 22.186a1.006 1.006 0 01-.703.269 1.006 1.006 0 01-.703-.269L13.792 12z" fill="#34A853"/>
+                    <path d="M13.792 12L16.5 7.5l4.146-2.341a1 1 0 01.354.734v9.107a1 1 0 01-.354.734L16.5 16.5 13.792 12z" fill="#4285F4"/>
                   </svg>
-                </div>
-                <div className="text-left">
-                  <div className="text-xs opacity-80">{t('Download on the')}</div>
-                  <div className="font-semibold">{t('App Store')}</div>
-                </div>
-              </Button>
-              <Button size="lg" className="bg-black text-white hover:bg-black/90 flex items-center gap-3 px-6 rounded-xl w-64">
-                <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
-                  <path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.609-.92z" fill="#EA4335"/>
-                  <path d="M13.792 12L3.609 1.814a1.006 1.006 0 01.703-.269 1.006 1.006 0 01.703.269L16.5 7.5 13.792 12z" fill="#FBBC04"/>
-                  <path d="M13.792 12L16.5 16.5 5.015 22.186a1.006 1.006 0 01-.703.269 1.006 1.006 0 01-.703-.269L13.792 12z" fill="#34A853"/>
-                  <path d="M13.792 12L16.5 7.5l4.146-2.341a1 1 0 01.354.734v9.107a1 1 0 01-.354.734L16.5 16.5 13.792 12z" fill="#4285F4"/>
-                </svg>
-                <div className="text-left">
-                  <div className="text-xs opacity-80">{t('GET IT ON')}</div>
-                  <div className="font-semibold">{t('Google Play')}</div>
-                </div>
-              </Button>
+                  <div className="text-left">
+                    <div className="text-xs opacity-80">{t('GET IT ON')}</div>
+                    <div className="font-semibold">{t('Google Play')}</div>
+                  </div>
+                </Button>
+              </a>
             </div>
 
           </div>
@@ -179,7 +183,7 @@ const Hero = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 rounded-full blur-3xl"></div>
             {/* Main Phone - Camera View */}
             <div className="relative z-10">
-              <div className="w-80 h-[600px] bg-gradient-to-b from-emerald-200 to-emerald-100 rounded-[3rem] p-2 shadow-2xl hover-scale">
+              <div className="w-80 h-[600px] bg-gradient-to-b from-emerald-200 to-emerald-100 rounded-[3rem] p-2 shadow-2xl hover-scale drop-shadow-2xl shadow-emerald-500/20">
                 <div className="w-full h-full bg-black rounded-[2.5rem] overflow-hidden relative">
                   {/* Camera Interface */}
                   <div className="absolute inset-0">
@@ -248,7 +252,7 @@ const Hero = () => {
 
             {/* Secondary Phone - Enhanced Results */}
             <div className="absolute -right-8 top-8 z-0">
-              <div className="w-80 h-[540px] bg-gradient-to-b from-rose-200 to-pink-100 rounded-[2.5rem] p-2 shadow-2xl hover-scale">
+              <div className="w-80 h-[540px] bg-gradient-to-b from-rose-200 to-pink-100 rounded-[2.5rem] p-2 shadow-2xl hover-scale drop-shadow-2xl shadow-rose-500/20">
                 <div className="w-full h-full bg-white rounded-[2rem] overflow-hidden">
                   <div className="p-4 space-y-4">
                     {/* Header */}

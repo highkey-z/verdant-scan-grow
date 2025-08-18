@@ -30,7 +30,7 @@ const Hero = () => {
         
         {/* Additional geometric shapes */}
         <div className="absolute top-16 right-1/2 w-24 h-24 bg-gradient-to-br from-emerald-100/70 to-emerald-200/40 rounded-full shadow-md"></div>
-        <div className="absolute bottom-32 right-1/4 w-36 h-36 border-3 border-emerald-300/50 rounded-lg rotate-45"></div>
+        <div className="absolute bottom-8 right-1/4 w-36 h-36 border-3 border-emerald-300/50 rounded-lg rotate-45"></div>
         
         {/* Blurred Organic Plant Silhouettes */}
         <div className="absolute top-1/4 left-8 w-24 h-32 bg-gradient-to-br from-emerald-300/20 to-emerald-400/10 blur-xl rounded-[60%_40%_30%_70%/60%_30%_70%_40%] animate-pulse" style={{animationDelay: '0.5s'}}></div>
@@ -82,8 +82,8 @@ const Hero = () => {
       </div>
       {/* Plant Bubbles - Positioned in safe areas with white borders */}
       
-      {/* Above UseVerdant title */}
-      <div className="absolute top-8 left-1/4 w-16 h-16 rounded-full border-4 border-white shadow-lg overflow-hidden bg-white hover-scale">
+      {/* Above UseVerdant title - moved up more */}
+      <div className="absolute top-2 left-1/4 w-16 h-16 rounded-full border-4 border-white shadow-lg overflow-hidden bg-white hover-scale">
         <img src="/lovable-uploads/8a403ba0-c447-4350-8503-0cc87b8e3527.png" alt="Venus flytrap plant" className="w-full h-full object-cover rounded-full" />
       </div>
       
@@ -130,9 +130,9 @@ const Hero = () => {
             </div>
 
             {/* Download Buttons */}
-            <div className="bg-gradient-to-r from-emerald-50/80 to-teal-50/80 backdrop-blur-sm rounded-3xl p-6 border border-emerald-100/50 space-y-4 animate-fade-in max-w-sm">
+            <div className="space-y-4 animate-fade-in">
               <a href="https://apps.apple.com/app/verdant" target="_blank" rel="noopener noreferrer">
-                <Button size="lg" className="bg-black text-white hover:bg-black/90 flex items-center gap-3 px-6 rounded-xl w-full">
+                <Button size="lg" className="bg-black text-white hover:bg-black/90 flex items-center gap-3 px-6 rounded-xl w-64">
                   <div className="w-6 h-6 bg-white rounded-sm flex items-center justify-center">
                     <svg className="w-4 h-4" viewBox="0 0 24 24" fill="black">
                       <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
@@ -145,7 +145,7 @@ const Hero = () => {
                 </Button>
               </a>
               <a href="https://play.google.com/store/apps/details?id=com.verdant" target="_blank" rel="noopener noreferrer">
-                <Button size="lg" className="bg-black text-white hover:bg-black/90 flex items-center gap-3 px-6 rounded-xl w-full">
+                <Button size="lg" className="bg-black text-white hover:bg-black/90 flex items-center gap-3 px-6 rounded-xl w-64">
                   <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
                     <path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.609-.92z" fill="#EA4335"/>
                     <path d="M13.792 12L3.609 1.814a1.006 1.006 0 01.703-.269 1.006 1.006 0 01.703.269L16.5 7.5 13.792 12z" fill="#FBBC04"/>
